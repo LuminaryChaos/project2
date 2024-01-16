@@ -9,18 +9,20 @@
 
         <style>
 
-
+            body{
+                height: 16000px;
+                margin-left: 20px;
+                margin-left: 0px;
+                margin-top: 0px;
+            }
             
             .container{
                 display: flex;
                 justify-content: space-between;
-                width: 100%;
+                width: 1290px;
                 height: 890px;
                 align-items: start;
-
                 background-color: rgb(20, 171, 222);
-
-                
             }
 
             .brand{
@@ -156,56 +158,70 @@
                 
             }
 
-            .why_travel_div1{
-                background-image: linear-gradient(rgba(21, 23, 29, 0) 35%, rgb(18, 18, 18) 77%), url( "https://images.prismic.io/travelsation/a3c7af10-0077-429f-a214-9ca5e0b85345_kelsey-chance-CutTQTt2HyI-unsplash.jpg?auto=compress,format&w=768");
-                height: 540px;
-                width:  380px;
-                background-size: contain;
+
+            .cards {
+                display: flex;
+                flex-direction: row;
+                gap: 15px;
+                padding-left: 30px;
+            }
+
+            .cards .red {
+                background-image: url("https://images.prismic.io/travelsation/a3c7af10-0077-429f-a214-9ca5e0b85345_kelsey-chance-CutTQTt2HyI-unsplash.jpg?auto=compress,format&w=768");
                 background-repeat: no-repeat;
-                border-radius: 15px;
-                color: white;
-                font-size: 28px;
+                background-size: 500px  600px;
+                margin-left: 25px;
+                
+            }
+
+            .cards .blue {
+                background-image: url("https://images.prismic.io/travelsation/24e405ad-1157-4ec8-9a6f-9d76e3253468_manny-moreno-9gLG64sWdd8-unsplash.jpg?auto=compress,format&w=768");
+                background-repeat: no-repeat;
+                background-size: 500px 600px;
+                width: 500px;
+                height: 500px;
+                border-radius: 10px;
+                margin-left: 10px;
+                
+            }
+
+            .cards .green {
+                background-image: url("https://images.prismic.io/travelsation/ca285829-f404-47be-ae02-5c3099ea4d94_david-potaczala-VodPhSqe7Dc-unsplash.jpg?auto=compress,format&w=768");
+                background-repeat: no-repeat;
+                background-size: 500px 600px;
+                margin-left: 10px;
+            }
+
+            .cards .card {
                 display: flex;
                 align-items: center;
-                
-                
-            }  
-
-            
-            .why_travel_div1:hover{
-                background-color: rgb(124, 123, 123);
-                
-
+                justify-content: space-around;
+                text-align: center;
+                height: 100px;
+                width: 250px;
+                border-radius: 20px;
+                color: white;
+                cursor: pointer;
+                transition: 400ms;
+                height: 530px;
+                width: 380px;
             }
 
-            .why_travel_div2{
-                background-image: linear-gradient(rgba(21, 23, 29, 0) 35%, rgb(18, 18, 18) 77%),  url("https://images.prismic.io/travelsation/24e405ad-1157-4ec8-9a6f-9d76e3253468_manny-moreno-9gLG64sWdd8-unsplash.jpg?auto=compress,format&w=768");
-                background-color: rgb(232, 156, 156);
-                height: 540px;
-                width: 400px;
-                background-size:  400px 540px;
-                border-radius: 15px;
-                font-size: 28px;
-            }
-            .why_travel_div3{
-                background-image: linear-gradient(rgba(21, 23, 29, 0) 35%, rgb(18, 18, 18) 77%),  url("https://images.prismic.io/travelsation/ca285829-f404-47be-ae02-5c3099ea4d94_david-potaczala-VodPhSqe7Dc-unsplash.jpg?auto=compress,format&w=768");
-                background-color: red;
-                height: 540px;
-                width: 400px;
-                background-size:  400px 540px;
-                font-size: 28px;
-                border-radius: 15px;
-                background-repeat: no-repeat;
+            .cards .card p.tip {
+                font-size: 30px;
+                color: rgb(255, 255, 255);
+                font-weight: 700;
+                margin-bottom: -250px;
             }
 
-
-            .price_container{
-                display: flex;
-                justify-content: space-evenly;
+            .cards .card:hover {
+                transform: scale(1,1);
             }
 
-
-
+            .cards:hover > .card:not(:hover) {
+                filter: blur(10px);
+                transform: scale(0.9, 0.9);
+            }
 
 
 
@@ -223,12 +239,12 @@
     <body>
 
         <div class="container">
-            <div class="brand"> Join <br> My Trip 
+            <div class="brand"> Join <br> My Trip
                 <i class="fa-solid fa-person-hiking"></i>
             </div>
             <div class="div2" >
                 <a href="#" class="button_barre"  ><b>ALL TRIPS</b>  <i class="fa-solid fa-images" style="margin:0px 0px 2px 5px;"></i></a>
-                <a href="#" class="button_barre"  > <b>inscription</b> <i class="fa-solid fa-scroll" style="margin:0px 0px 5px 5px;"></i></a>
+                <a href="inscription.html" class="button_barre"  > <b>inscription</b> <i class="fa-solid fa-scroll" style="margin:0px 0px 5px 5px;"></i></a>
                 
                 <a href="#" class="button_barre" ><b> groups</b> <i style="margin: 0px 0px 4px 3px;" class="fa-solid fa-user-group" ></i> </a>
                 <a href="#" class="button_barre" style="margin-left: 260px;" ><i class="fa-solid fa-circle-info" style="margin:0px 0px 0px 5px;"></i></a>   
@@ -262,42 +278,32 @@
 
 
         
-        <p style="margin: 386px 0px 0px 540px; font-size: 30px;"> <b>Why travel with us?</b></p>
+        <p style="margin: 386px 0px 0px 490px; font-size: 30px;"> <b>Why travel with us?</b></p>
 
         <br><br><br>
 
-        <div class="div_de_why_travel_div">
-            <div class="why_travel_div1" ><p style="margin: 270px 0px 0px 35px; color: #dfdfdf;" ><b> Enjoy trips you cannot find anywhere else</b></p></div>
-            <div class="why_travel_div2"> <p style="margin: 370px 0px 0px 25px; color: #dadada;" ><b> Know all your TripMates before you travel</b></p></div>
-            <div class="why_travel_div3"> <p style="margin: 370px 0px 0px 25px; color: #d5d5d5;" ><b> Unbeatable prices for smallest group sizes</b></p></div>   
-        </div>
+
         
         <br><br><br>
         <br><br><br>
-        <br><br><br>
-        <br><br><br>
-        <br><br><br>
-        <br><br><br>
-        <br><br><br>
-        <br><br><br>
-        <br><br><br>
+
         
 
-        <div class="price_container">
-            <div class="price1"> Normal </div>
-            <div class="price2">VIP </div>
-        </div>
-
-
-        <div class="container3">
-            <div class="card_box">
-                <span></span>
+        <div class="cards">
+            <div class="card red">
+                <p class="tip">Enjoy trips you cannot find anywhere else</p>
+            </div>
+            <div class="card blue">
+                <p class="tip">Know all your TripMates before you travel</p>
+            </div>
+            <div class="card green">
+                <p class="tip">Unbeatable prices for smallest group sizes</p>
             </div>
         </div>
 
 
 
-
+        <br><br><br>
 
 
 
