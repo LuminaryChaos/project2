@@ -10,7 +10,7 @@
         <style>
 
             body{
-                height: 16000px;
+                height: 10000px;
                 margin-left: 20px;
                 margin-left: 0px;
                 margin-top: 0px;
@@ -19,7 +19,7 @@
             .container{
                 display: flex;
                 justify-content: space-between;
-                width: 1290px;
+                width: 100%;
                 height: 890px;
                 align-items: start;
                 background-color: rgb(20, 171, 222);
@@ -34,11 +34,12 @@
             
             .div2{         
                 width: auto;
-                margin-right: -90px;
+                margin-left: 200px;
                 height: 135px;
                 width: 900px; 
                 display: flex;
                 align-items: center;   
+                justify-content: center;
             }
 
             .button_barre{
@@ -63,15 +64,14 @@
                 background-color: white;
                 height: 494px;
                 width: 355px;  
-                margin: -660px 0px 0px 280px;  
+                margin:  -660px 0px 0px 22%;
+                /* margin: -660px 0px 0px 280px;   */
                 rotate: 201rad;
 
             }
             .first_pic{
-                background-image: url('rn50e1idzyww9blug42l.jpg');
-               
+                background-image: url('rn50e1idzyww9blug42l.jpg'); 
                 border-radius: 10px;
-                
                 background-size: 330px 400px;
                 height: 393px;
                 width: 326px;
@@ -81,70 +81,60 @@
             }
 
 
+        .move-icon {
+            position: relative;
+            animation: moveAndBack 2s infinite alternate;
+        }
 
-
-
-
-
-
-            .my01, .my02, .my03{
-                font-size: 60px;
-                color: gray;
-                font-weight: bold;
-                opacity: 40%;
+        @keyframes moveAndBack {
+                0% {
+                    left: 0;
+                }
+                100% {
+                    left: calc(40% ); 
+                }
             }
-
-
-            .my01{
-                margin-left: 300px;
-                margin-top: 500px;
-            }
-            .my02{
-                margin-left: 900px;
-            }
-            .my03{
-                margin-left: 300px;
-            }
-
-
-
 
 
 
 
 
             .visited_places{
-                background-color: aqua;
-                height: 400px;
-                width: 500px;
+
+                height: 450px;
+                width: 600px;
                 margin-left: 100px;
-                background-image: url('Friend_Travel-Trip_Planning.jpg');
+                background-image: url('museum.jpg');
                 border-radius: 25px;
-                background-size: 500px 400px;
+                background-size: 600px 450px;
                 background-repeat: no-repeat;
                 display: inline-block;
+                margin: -100px 0px 0px 100px;
             }
 
             .games_played{           
-                background-color: aqua;
-                height: 400px;
-                width: 500px;
+
+                height: 450px;
+                width: 600px;
                 margin-left: 700px;
-                background-image: url('sociosport-impact-social-380x252.jpg');  
-                background-size: 500px 400px;
+                margin-top: -90px;
+                background-image: url('jetski.jpg');  
+                background-size: contain;
                 background-repeat: no-repeat;
-                border-radius: 25px;
+                background-position: center;
+                border-radius: 40px;
                 display: inline-block;
             } 
 
             .challenges{
-                background-color: aqua;
-                height: 300px;
-                width: 400px;
+                height: 500px;
+                width: 500px;
                 margin-left: 150px;
+                margin-top: -100px;
                 display: inline-block;
                 border-radius: 25px;
-                background-size: 500px 400px;
+                background-image: url("pexels-vitor-lopes-15121201.jpg");
+                background-size: cover;
                 background-repeat: no-repeat;
             }
 
@@ -152,7 +142,6 @@
 
             .div_de_why_travel_div{
                 margin-top: 50px;
-                
                 display: flex;
                 justify-content: space-evenly;
                 
@@ -160,10 +149,11 @@
 
 
             .cards {
-                display: flex;
-                flex-direction: row;
-                gap: 15px;
-                padding-left: 30px;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 35px;
+                padding-left: 40px;
+                justify-content: center;
             }
 
             .cards .red {
@@ -218,7 +208,7 @@
                 transform: scale(1,1);
             }
 
-            .cards:hover > .card:not(:hover) {
+            .cards:hover  .card:not(:hover) {
                 filter: blur(10px);
                 transform: scale(0.9, 0.9);
             }
@@ -227,9 +217,166 @@
 
 
 
+            .my01, .my02, .my03{
+
+                font-size: 170px;
+                color: rgb(58, 55, 57);
+                font-weight: bold;
+                opacity: 40%;
+            }
+
+
+            .my01{
+                margin-left: 300px;
+                margin-top: -700px;
+            }
+            .my02{
+                margin-left: 870px;
+                margin-top: 105px;
+            }
+            .my03{
+                margin-left: 300px;
+            }
 
 
 
+            
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            margin-top: 200px;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-section {
+            flex: 1;
+            padding: 0 20px;
+        }
+
+        .footer-section h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .footer-section p {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .container2 {
+            display: flex;
+            justify-content: space-evenly;
+            height: 500px;
+            margin-left: 20px;
+            width: 95%;
+            max-width: 1600px; 
+            margin: 0 auto; 
+        }
+
+        .box {
+            width: 600px;
+            height: 470px;
+            background-color: #cce5ff; 
+            border-radius: 10px;
+            opacity: 0;
+            animation-delay: 2.5s;
+            display: inline-block;
+            animation-name: faderight;
+            animation-duration: 5s;
+            animation-fill-mode: forwards;
+        }
+
+
+
+
+            
+     @keyframes faderight{
+        
+            0%{
+                opacity: 0;
+                transform: translateX(-200%);
+            }
+
+            25%{
+                opacity: 1;
+                transform: translateX(0%);
+            }
+
+            50%{
+                opacity: 1;
+                transform: translateX(0%);
+            }
+            70%{
+                opacity: 1;
+                transform: translateX(0%);
+            }
+
+            100%{
+                opacity: 1;
+                transform: translateX(0%);
+            }
+        }
+
+
+        .title-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.title-container h2 {
+  font-size: 2rem;
+  color: #4CAF50;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+        .input-container {
+            display: flex;
+            justify-content: space-between;
+            width: 50%;
+            margin: 0 auto;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            padding: 20px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #destination, #date {
+            border: none;
+            flex-grow: 1;
+            margin-right: 10px;
+            padding: 10px;
+            font-size: 1.2rem;
+            border-radius: 4px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #date {
+            text-align: center;
+        }
+
+        #find-trips {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+            #find-trips:hover {
+                background-color: #45a049;
+            }
 
             
         </style>
@@ -240,10 +387,10 @@
 
         <div class="container">
             <div class="brand"> Join <br> My Trip
-                <i class="fa-solid fa-person-hiking"></i>
+                <i class="fa-solid fa-person-hiking move-icon"></i>
             </div>
             <div class="div2" >
-                <a href="#" class="button_barre"  ><b>ALL TRIPS</b>  <i class="fa-solid fa-images" style="margin:0px 0px 2px 5px;"></i></a>
+                <a href="#targetDiv" class="button_barre"   ><b>Top trips</b>  <i class="fa-solid fa-images" style="margin:0px 0px 2px 5px;"></i></a>
                 <a href="inscription.html" class="button_barre"  > <b>inscription</b> <i class="fa-solid fa-scroll" style="margin:0px 0px 5px 5px;"></i></a>
                 
                 <a href="#" class="button_barre" ><b> groups</b> <i style="margin: 0px 0px 4px 3px;" class="fa-solid fa-user-group" ></i> </a>
@@ -260,52 +407,180 @@
         </div>
 
 
-        <p style="color: white; margin: -400px 0px 0px 700px; font-weight: bold;font-size: 60px;"> Experience <br> <br> Group Trips </p>
+        <p style="color: white; margin: -400px 0px 0px 55%; font-weight: bold;font-size: 60px; width: 400px;"> Experience <br> <br> Group Trips </p>
 
 
-
-        <div style="display: inline-block;">
+    <div style="display: flex; justify-content: center; margin-right: 380px;">
+        <div >
             <p style="font-size: 30px;font-weight: bolder;"><i class="fa-solid fa-star" style="color: rgb(14, 170, 14); margin: 400px 20px 0px 450px; width: 20px; height: 20px; "></i>4.6/5 </p>         
             <p style="color: rgb(140, 140, 140); font-size: 24px; margin: -30px 0px 0px 455px; font-weight: bolder; "> Rated on TrustPilot</p>   
         </div>
 
-        <div style="display: inline-block;">
+        <div >
             <p style="font-size: 30px;font-weight: bolder;"><i class="fa-solid fa-location-dot" style="color: rgb(88, 158, 209); margin: 400px 20px 0px 40px; width: 20px; height: 20px; "> </i>5,224+</p>         
             <p style="color: rgb(140, 140, 140); font-size: 24px; margin: -30px 0px 0px 40px; font-weight: bolder; "> Completed Trips</p>   
         </div>
+    </div>
 
+        <br>
 
-
-
-        
-        <p style="margin: 386px 0px 0px 490px; font-size: 30px;"> <b>Why travel with us?</b></p>
-
-        <br><br><br>
-
-
-        
-        <br><br><br>
-        <br><br><br>
-
-        
-
-        <div class="cards">
-            <div class="card red">
-                <p class="tip">Enjoy trips you cannot find anywhere else</p>
+        <div style="display: flex; margin: 150px 2px -152px 2px; justify-content: space-evenly;">
+            <div style="height: 400px;width: 350px;">
+                <div style="margin: 0px 0px 0px 135px;"><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i></div>
+                <p style="width: 300px; text-align: center; margin: 20px 0px 0px 28px;font-size: 19px;">"Wow, what an incredible trip! The breathtaking landscapes, vibrant cultures, and unforgettable experiences made this journey truly remarkable. From hiking through lush rainforests to exploring ancient ruins, every moment was filled with awe and wonder. The warm hospitality of the locals added an extra layer of charm to the trip. I can't wait to go back and discover more hidden gems in this captivating destination!"</p>
+                <div style="display: flex;margin-left: 50px;margin-top: 45px;">
+                    <div style="height: 60px;width: 60px;; margin: 10px 0px 0px 30px;"><img src="female1.jpg" style="height: 70;width: 65px;border-radius: 30px"></div>
+                    <p style=" margin: 20px 0px 0px 10px;font-weight: bold;">Annie</p>
+                </div>
+                <p style="margin: -23px 0px 0px 150px;color: gray;width: 300px;">Trip to Greece in June with Rita</p>
             </div>
-            <div class="card blue">
-                <p class="tip">Know all your TripMates before you travel</p>
+
+            <div style="height: 400px;width: 350px;">
+                <div style="margin: 0px 0px 0px 150px;"><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i></div>
+                <p style="width: 330px; text-align: center; margin: 20px 0px 0px 28px;font-size: 19px;">"I had the most amazing time on this trip! The itinerary was thoughtfully planned, allowing us to immerse ourselves in the local culture and traditions. The bustling markets, aromatic street food, and vibrant festivals created a tapestry of sights, sounds, and flavors. The knowledgeable guides provided fascinating insights into the history and significance of each place we visited. It was a truly enriching experience that left me with a deeper appreciation for the beauty and diversity of our world."</p>
+                <div style="display: flex;margin-left: 50px;margin-top: 20px;">
+                    <div style="height: 60px;width: 60px;border-radius: 30px; margin: 10px 0px 0px 30px;"><img src="azazel.jpg" style="height: 60;width: 60px;border-radius: 60px;margin-top: px;"></div>
+                    <p style=" margin: 20px 0px 0px 10px; font-weight: bold;">Azazel</p>
+                </div>
+                <p style="margin: -23px 0px 0px 150px;color: gray; width: 300px;">Sled Dog tour in Sweden with Kathi</p>
             </div>
-            <div class="card green">
-                <p class="tip">Unbeatable prices for smallest group sizes</p>
+
+            <div style="height: 400px;width: 350px;">
+                <div style="margin: 0px 0px 0px 160px;"><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i></div>
+                <p style="width: 350px; text-align: center; margin: 20px 0px 0px 28px;font-size: 19px;" >"This trip exceeded all my expectations and left me with memories that will last a lifetime. From the moment we arrived, we were greeted with warm smiles and a genuine sense of hospitality. The accommodations were top-notch, offering incredible comfort and stunning views. Whether it was exploring ancient ruins or relaxing on pristine beaches, every day brought new adventures and discoveries. This trip was a perfect balance of relaxation, adventure, and cultural immersion. I'm already dreaming of my next visit to this magical destination!"</p>
+                <div style="display: flex;margin-left: 50px;">
+                    <div style="height: 60px;width: 60px;background-color: red;border-radius: 30px; margin: 30px 0px 0px 30px;"><img src="josh.jpg" style="height: 60px;width: 60px;border-radius: 50px;margin-top: px;"></div>
+                    <p style=" margin: 40px 0px 0px 10px;font-weight: bold;">Othmane</p>
+                </div>
+                <p style="margin: -23px 0px 0px 150px;color: gray; width: 210px;">Surf trip in Ericeira with Filippo</p>
             </div>
         </div>
+        
+
+
+        <p style="margin: 386px 0px 0px 40%; font-size: 30px;"> <b>Why travel with us?</b></p>
+
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
+
+        
+
+            <div class="cards">
+                <div class="card red">
+                    <p class="tip">Enjoy trips you cannot find anywhere else</p>
+                </div>
+                <div class="card blue">
+                    <p class="tip">Know all your TripMates before you travel</p>
+                </div>
+                <div class="card green">
+                    <p class="tip">Unbeatable prices for smallest group sizes</p>
+                </div>
+            </div>
 
 
 
         <br><br><br>
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
 
 
+
+ 
+    <p style="font-size: 30px;margin: 0px 0px 900px 37% ;font-weight: bold; ">An exemple one of our trips</p>
+
+
+    <div class="trips">   
+
+        <p class="my01">01</p>
+        <div class="visited_places"></div>
+        <p style="display: inline-block; vertical-align: 190px; margin-left: 20px; font-size: 30px;color: rgb(52, 52, 52)"> At the begining, We Visit Museums</p>
+
+        <br><br>
+
+        
+            <i class="fa-solid fa-shoe-prints" style="font-size: 70px; margin: 50px 0px 0px 650px;  rotate:39rad;color: gray"></i>
+            <i class="fa-solid fa-shoe-prints" style="font-size: 70px; margin: 90px 0px 0px 700px;  rotate: 45rad;color: gray"></i>
+            <i class="fa-solid fa-shoe-prints" style="font-size: 70px; margin: 85px 0px 0px 800px;  rotate: 1rad;color: gray"></i>
+            <i class="fa-solid fa-shoe-prints" style="font-size: 70px; margin: 90px 0px 0px 900px;  rotate: 190rad;color: gray"></i>
+
+
+
+
+
+
+        <p class="my02">02</p>
+        <div class="games_played"></div>
+        <p style="display: inline-block; vertical-align: 190px; margin: -200px 0px 0px 120px; font-size: 30px;color: rgb(52, 52, 52);">Secondly, We do Alot Of Activities like Jetski</p>
+
+        <br><br><br>
+
+        <i class="fa-solid fa-shoe-prints" style="font-size: 70px; margin: 50px 0px 0px 650px;  rotate: 8rad; color: gray;"></i>
+        <i class="fa-solid fa-shoe-prints" style="font-size: 70px; margin: 90px 0px 0px 579px;  rotate: 15rad;color: gray"></i>
+        <i class="fa-solid fa-shoe-prints" style="font-size: 70px;  rotate: 21rad; position: relative;top: 130px;left: -195px;color: gray"></i>
+
+        <p class="my03">03</p>
+        <div class="challenges"></div>
+        <p style="display: inline-block; vertical-align: 190px; margin-left: 20px; font-size: 30px;color: rgb(52, 52, 52)" > We Face A Lot Of Challenges</p>
+
+        </div> 
+        
+    </div>
+
+    <p style="font-weight:bolder; color: rgb(27, 214, 221);margin: 300px 0px 80px 0px;font-size: 40px; text-align: center;">Top destinations</p>
+    
+    <div id="targetDiv" class="container2">
+        <div class="box" style="margin-left: 20px;opacity: 0;animation-delay: 1s;display: inline-block;animation-name: faderight;animation-duration: 3s;animation-fill-mode: forwards;background-image: url('Greece.jpg');background-size: 600px 500px;background-repeat: no-repeat;background-attachment: fixed;"> </div>
+        <div class="box" style="margin-left: 20px;opacity: 0;animation-delay: 2.5s;display: inline-block;animation-name: faderight;animation-duration: 3s;animation-fill-mode: forwards;background-image: url('pexels-mark-neal-2225442.jpg');background-size: 500px 500px;background-repeat: no-repeat;background-attachment: fixed;"></div>
+        <div class="box" style="margin-left: 20px;opacity: 0;animation-delay: 4.5s;display: inline-block;animation-name: faderight;animation-duration: 3s;animation-fill-mode: forwards;background-image: url('om.jpg');background-size: 500px 500px;background-repeat: no-repeat;background-attachment: fixed;background-position: center;"></div>
+        <div class="box" style="margin-left: 20px;opacity: 0;animation-delay: 6s;display: inline-block;animation-name: faderight;animation-duration: 3s;animation-fill-mode: forwards;background-image: url('France.jpg');background-size: 400px 480px;background-repeat: no-repeat;background-attachment: fixed;"></div>
+    </div>
+
+    <div  style="display: flex; justify-content: space-around; ">
+        <div style="margin-left: 45px;display: flex; flex-direction: row;" > <div style="display: flex; align-items: start ;"><p>G</p></div> <div style="display: flex; align-items:end;">r</div> <div style="display: flex; align-items: start;">e</div> <div style="display: flex; align-items: center;">e</div> <div style="display: flex; align-items: flex-end;">c</div> <div>e</div> </div>
+        <div style="margin-left: 4px;"> Italy </div> 
+        <div style="margin-left: 45px;display: flex; flex-direction: row;" > <div style="display: flex; align-items: start ;"><p>M</p></div> <div style="display: flex; align-items:end;">a</div> <div style="display: flex; align-items: start;">r</div> <div style="display: flex; align-items: center;">o</div> <div style="display: flex; align-items: flex-end;">c</div> </div>
+        <div style="margin-left: 0px;"> France </div>
+    </div>
+
+
+
+
+
+    
+
+<div class="title-container">
+    <h2>Where do you wanna travel</h2>
+  </div>
+  <div class="input-container">
+    <input type="text" id="destination" placeholder="Anywhere">
+    <input type="text" id="date" placeholder="Anytime">
+    <button id="find-trips">FIND TRIPS</button>
+  </div>
+
+        
+        
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h2>About Us</h2>
+                <p>We always make sure that you will have an extremly great and unforgettable trip in your whole life.</p>
+            </div>
+            <div class="footer-section">
+                <h2>Contact</h2>
+                <p>Email: info@yourtrips.com</p>
+                <p>Phone: +1 (123) 456-7890</p>
+            </div>
+            <div class="footer-section">
+                <h2>Follow Us</h2>
+                <p>Stay connected on social media:</p>
+                <p>Facebook : Tripmakers</p>
+                <p>Youtube : GoldenTrips </p>
+                <p>Instagram : Tripmakers V-I-P</p>
+            </div>
+        </div>
+    </footer>
 
     </body>
 
@@ -328,6 +603,15 @@
 
 
 
+<!-- <div style="display: inline-block; margin-left: 5%;">
+    <p style="font-size: 30px;font-weight: bolder;"><i class="fa-solid fa-star" style="color: rgb(14, 170, 14); margin: 400px 20px 0px 450px; width: 20px; height: 20px; "></i>4.6/5 </p>         
+    <p style="color: rgb(140, 140, 140); font-size: 24px; margin: -30px 0px 0px 455px; font-weight: bolder; "> Rated on TrustPilot</p>   
+</div>
+
+<div style="display: inline-block;">
+    <p style="font-size: 30px;font-weight: bolder;"><i class="fa-solid fa-location-dot" style="color: rgb(88, 158, 209); margin: 400px 20px 0px 40px; width: 20px; height: 20px; "> </i>5,224+</p>         
+    <p style="color: rgb(140, 140, 140); font-size: 24px; margin: -30px 0px 0px 40px; font-weight: bolder; "> Completed Trips</p>   
+</div> -->
 
 
 
@@ -358,34 +642,4 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- 
-
-        <p class="my01">01</p>
-        <div class="visited_places"></div>
-        <p style="display: inline-block; vertical-align: 190px; margin-left: 20px; font-size: 30px;">We Visit A Lot Of Places</p>
-
-
-
-        <p class="my02">02</p>
-        <div class="games_played"></div>
-        <p style="display: inline-block; vertical-align: 190px; margin: -200px 0px 0px 380px; font-size: 30px;">We Play Alot Of Games</p>
-
-
-
-        <p class="my03">03</p>
-        <div class="challenges"></div>
-        <p style="display: inline-block; vertical-align: 190px; margin-left: 20px; font-size: 30px;" > We Face A Lot Of Challenges</p>
-
- -->
+        
