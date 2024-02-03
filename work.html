@@ -359,6 +359,7 @@
             #find-trips:hover {
                 background-color: #45a049;
             }
+            
 
             .form-control {
                 position: relative;
@@ -392,7 +393,19 @@
                 pointer-events: none;
             }
 
+            .form-control label span {
+                display: inline-block;
+                font-size: 18px;
+                min-width: 5px;
+                color: rgb(61, 206, 61);
+                transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            }
 
+            .form-control input:focus +label span,
+            .form-control input:valid + label span {
+                color: rgb(61, 206, 61);
+                transform: translateY(-30px);
+            }
 
             
         </style>
@@ -547,10 +560,10 @@
     
     <div>
         <div id="targetDiv" class="container2">
-            <div class="box" style="margin-left: 20px;opacity: 0;animation-delay: 1s;display: inline-block;animation-name: faderight;animation-duration: 3s;animation-fill-mode: forwards;background-image: url('images/Greece.jpg');background-size: 600px 500px;background-repeat: no-repeat;background-attachment: fixed;"> </div>
-            <div class="box" style="margin-left: 20px;opacity: 0;animation-delay: 2.5s;display: inline-block;animation-name: faderight;animation-duration: 3s;animation-fill-mode: forwards;background-image: url('images/pexels-mark-neal-2225442.jpg');background-size: 500px 500px;background-repeat: no-repeat;background-attachment: fixed;"></div>
-            <div class="box" style="margin-left: 20px;opacity: 0;animation-delay: 4.5s;display: inline-block;animation-name: faderight;animation-duration: 3s;animation-fill-mode: forwards;background-image: url('images/om.jpg');background-size: 500px 500px;background-repeat: no-repeat;background-attachment: fixed;background-position: center;"></div>
-            <div class="box" style="margin-left: 20px;opacity: 0;animation-delay: 6s;display: inline-block;animation-name: faderight;animation-duration: 3s;animation-fill-mode: forwards;background-image: url('images/France.jpg');background-size: 400px 480px;background-repeat: no-repeat;background-attachment: fixed;"></div>
+            <div  class="box" style="margin-left: 20px;opacity: 0;animation-delay: 1s;display: inline-block;animation-name: faderight;animation-duration: 3s;animation-fill-mode: forwards;background-image: url('images/Greece.jpg');background-size: 600px 500px;background-repeat: no-repeat;background-attachment: fixed;"> </div>
+            <div  class="box" style="margin-left: 20px;opacity: 0;animation-delay: 2.5s;display: inline-block;animation-name: faderight;animation-duration: 3s;animation-fill-mode: forwards;background-image: url('images/pexels-mark-neal-2225442.jpg');background-size: 500px 500px;background-repeat: no-repeat;background-attachment: fixed;"></div>
+            <div  class="box" style="margin-left: 20px;opacity: 0;animation-delay: 4.5s;display: inline-block;animation-name: faderight;animation-duration: 3s;animation-fill-mode: forwards;background-image: url('images/om.jpg');background-size: 500px 500px;background-repeat: no-repeat;background-attachment: fixed;background-position: center;"></div>
+            <div  class="box" style="margin-left: 20px;opacity: 0;animation-delay: 6s;display: inline-block;animation-name: faderight;animation-duration: 3s;animation-fill-mode: forwards;background-image: url('images/France.jpg');background-size: 400px 480px;background-repeat: no-repeat;background-attachment: fixed;"></div>
         </div>
 
         <div  style="display: flex; justify-content: space-around; ">
