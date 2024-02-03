@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>My Art Be Like :</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
         <style>
@@ -334,39 +334,16 @@
         .title-container {
             display: flex;
             justify-content: center;
-            margin: 20px 0;
+            margin: 200px 0px 0px 0px;
         }
 
-            .title-container h2 {
+        .title-container h2 {
             font-size: 2rem;
             color: #4CAF50;
             text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
         }
 
-        .input-container {
-            display: flex;
-            justify-content: space-between;
-            width: 50%;
-            margin: 0 auto;
-            border: 2px solid #ccc;
-            border-radius: 4px;
-            padding: 20px;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-        }
 
-        #destination, #date {
-            border: none;
-            flex-grow: 1;
-            margin-right: 10px;
-            padding: 10px;
-            font-size: 1.2rem;
-            border-radius: 4px;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        #date {
-            text-align: center;
-        }
 
         #find-trips {
             background-color: #4CAF50;
@@ -382,6 +359,40 @@
             #find-trips:hover {
                 background-color: #45a049;
             }
+
+            .form-control {
+                position: relative;
+                margin: 20px 0px 0px 550px;
+                width: 290px;
+                display: flex;
+                justify-content: space-evenly;
+            }
+
+            .form-control input {
+                background-color: transparent;
+                border: 0;
+                border-bottom: 2px rgb(61, 206, 61) solid;
+                display: block;
+                width: 100%;
+                padding: 15px 0;
+                font-size: 18px;
+                color: gray;
+            }
+
+            .form-control input:focus,
+            .form-control input:valid {
+                outline: 0;
+                border-bottom-color: rgb(61, 206, 61);
+            }
+
+            .form-control label {
+                position: absolute;
+                top: 15px;
+                left: 0;
+                pointer-events: none;
+            }
+
+
 
             
         </style>
@@ -559,11 +570,21 @@
         <h2>Where do you wanna travel</h2>
     </div>
 
-    <div class="input-container">
-        <input type="text" id="destination" placeholder="Anywhere">
-        <input type="text" id="date" placeholder="Anytime">
+    <div class="form-control">
+        <input type="value" required="">
+        <label>
+            <span style="transition-delay:0ms">A</span>
+            <span style="transition-delay:50ms">n</span>
+            <span style="transition-delay:100ms">y</span>
+            <span style="transition-delay:150ms">w</span>
+            <span style="transition-delay:200ms">h</span>
+            <span style="transition-delay:250ms">e</span>
+            <span style="transition-delay:300ms">r</span>
+            <span style="transition-delay:350ms">e</span>
+        </label>
         <button id="find-trips">FIND TRIPS</button>
     </div>
+
 
         
         
