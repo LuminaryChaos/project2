@@ -425,6 +425,36 @@ body{
                 transition-delay: 0.5s;
             }
 
+            .containerX .buttonI::after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                top: -5px;
+                height: 10px;
+                width: 30px;
+                background: rgb(7, 245, 59);
+                border-radius: 10px;
+                transition: 0.5s;
+                transition-delay: 0s;
+            }
+
+            .containerX .buttonI:hover::after {
+                top: 0;
+                height: 50%;
+                width: 83%;
+                border-radius: 30px;
+                transition-delay: 0.5s;
+            }
+
+            .containerX .buttonI:nth-child(1):before,
+            .containerX .buttonI:nth-child(1)::after {
+            background: #0cf318;
+            box-shadow: 0 0 5px #0ffb2e,
+                0 0 15px #2bff59,
+                0 0 30px #32ff2b,
+                0 0 60px #22ff47;
+            } 
 
             .containerX .buttonI:active a {
                 color: #f5f3f3;
