@@ -10,7 +10,19 @@
           body{
                 zoom: 95%;
             }
+
+
+      .travel-guide{
+        font-size: 15px;
+        font-weight: bold;
+        color: #86B817;
+        text-transform: uppercase;
+      }
   
+      div .travel-guide{
+        display: flex;
+        justify-content: center;
+      }
   
       h1.our-guide {
 
@@ -28,25 +40,170 @@
             padding: 0;
         }
 
+        .main-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        .squad-containers {
+            display: flex;
+            max-width: 300px;
+            padding: 0 1rem;
+            box-sizing: border-box;
+        }
+
+        .team-member {
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+        
+        .team-member {
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+
+        .social-links{
+          display: flex;
+          justify-content: center;
+        }
+
+ 
+
+        .overflow-hidden {
+            overflow: hidden;
+        }
+
+        .member-img {
+            max-width: 100%;
+            height: auto;
+            transform: scale(1,1);
+            transition: transform 0.3s ease-in-out;
+
+        }
+        
+        .member-img:hover {
+          transform: scale(1.1,1.1);
+        }
+
+
+        .position-relative {
+            position: relative;
+        }
+
+
+        .link {
+            display: inline-block;
+            font-weight: 400;
+            text-align: center;
+            border: 1px solid transparent;
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            border-radius: 0.25rem;
+            transition: color 0.15s ease-in-out;
+            width: 15px;
+            height: 25px;
+            background-color: white;
+            border-radius: 80px;
+            z-index: 2;
+            color: #86B817;
+            border-bottom-color: #86B817;
+            margin-left: 10px;
+        }
+        .link:hover {
+            color: rgb(255, 255, 255);
+            background-color: #86B817;
+            margin-left: 10px;
+        }
+
+
+
+        .member-info {
+            padding: 1.5rem;
+            text-align: center;
+            margin-top: -15px;
+            
+        }
+
+        .name {
+            margin-bottom: 0;
+            font-size: 20px;
+        }
+
+        .small {
+            font-size: 80%;
+        }
+        
 
 
 
   </style>
-
 </head>
+
+
 <body>
+  
+    <div>
+        <h2 class="travel-guide">________ travel guide ________</h2>
+    </div>
 
-  <h1 class="our-guide">Meet Our Guide</h1>
+    <h1 class="our-guide">Meet Our Guide</h1>
 
 
-  <div class="main-container">
+    <div class="main-container">
 
-      <div class="squad-containers">
+        <div class="squad-containers">
 
-        <div class="team-member">
-          <div class="overflow-hidden">
-          <img class="member-img"  src="file:///C:/Users/Dell/Downloads/Tourist%20Free%20Website%20Template%20-%20Free-CSS.com/travel-agency-html-template/img/team-3.jpg" alt="Team Member 1">
+          <div class="team-member">
+            <div class="overflow-hidden">
+            <img class="member-img"  src="images/team member 2.jpg" alt="Team Member 1">
+            </div>
+
+              <div class="social-links" style="margin-top: -19px;">
+                <a class="link" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="link" href="#"><i class="fab fa-twitter"></i></a>
+                <a class="link" href="#"><i class="fab fa-instagram"></i></a>
+              </div>
+
+            <div class="member-info">
+              <h5 class="name">Rodriguez</h5>
+              <small>Lead Developer</small>
+            </div>
+
           </div>
+        </div>
+
+
+
+        <div class="squad-containers">
+
+          <div class="team-member" >
+            <div class="overflow-hidden">
+              <img class="member-img" src="images/team member 1.jpg" alt="Team Member 2">
+            </div>
+            
+              <div class="social-links" style="margin-top: -19px;">
+                <a class="link" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="link" href="#"><i class="fab fa-twitter"></i></a>
+                <a class="link" href="#"><i class="fab fa-instagram"></i></a>
+              </div>
+
+            <div class="member-info">
+              <h5 class="name">Olivia Johnson</h5>
+              <small>Creative Director</small>
+            </div>
+
+          </div>
+        </div>
+
+
+        <div class="squad-containers">
+
+          <div class="team-member">
+            <div class="overflow-hidden">
+              <img class="member-img" src="images/team member 3.jpg" alt="Team Member 3">
+            </div>
 
             <div class="social-links" style="margin-top: -19px;">
               <a class="link" href="#"><i class="fab fa-facebook-f"></i></a>
@@ -54,15 +211,38 @@
               <a class="link" href="#"><i class="fab fa-instagram"></i></a>
             </div>
 
-          <div class="member-info">
-            <h5 class="name">Rodriguez</h5>
-            <small>Lead Developer</small>
+            <div class="member-info">
+              <h5 class="name">Caleb Turner</h5>
+              <small>UX/UI Designer</small>
+            </div>
+
           </div>
-
         </div>
+
+
+        <div class="squad-containers">
+
+          <div class="team-member">
+            <div class="overflow-hidden">
+              <img class="member-img" src="images/team member 4.jpg" alt="Team Member 4">
+            </div>
+
+            <div class="social-links" style="margin-top: -19px;">
+              <a class="link" href="#"><i class="fab fa-facebook-f"></i></a>
+              <a class="link" href="#"><i class="fab fa-twitter"></i></a>
+              <a class="link" href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+
+            <div class="member-info">
+              <h5 class="name">Mia Chang</h5>
+              <small> Marketing Specialist</small>
+            </div>
+
+          </div>
+        </div>
+        
       </div>
-
-
+      
 </body>
 </html>
 
