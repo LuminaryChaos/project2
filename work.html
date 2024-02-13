@@ -9,7 +9,7 @@
 
         <style>
 
-body{
+            body{
                 height: 10000px;
                 margin-left: 20px;
                 margin-left: 0px;
@@ -401,7 +401,9 @@ body{
                 transition: 0.5s;
             }
 
-            
+            .containerX .buttonI:hover a::before {
+                transform: skewX(45deg) translateX(200%);
+            }
 
             .containerX .buttonI::before {
                 content: '';
@@ -409,7 +411,7 @@ body{
                 left: 50%;
                 transform: translateX(-50%);
                 bottom: -5px;
-                height: 30px;
+                height: 10px;
                 width: 30px;
                 background: rgb(63, 238, 10);
                 border-radius: 10px;
@@ -420,7 +422,7 @@ body{
             .containerX .buttonI:hover::before {
                 bottom: 0;
                 height: 50%;
-                width: 83%;
+                width: 80%;
                 border-radius: 30px;
                 transition-delay: 0.5s;
             }
@@ -442,7 +444,7 @@ body{
             .containerX .buttonI:hover::after {
                 top: 0;
                 height: 50%;
-                width: 83%;
+                width: 80%;
                 border-radius: 30px;
                 transition-delay: 0.5s;
             }
@@ -454,11 +456,14 @@ body{
                 0 0 15px #2bff59,
                 0 0 30px #32ff2b,
                 0 0 60px #22ff47;
-            } 
+            }
 
             .containerX .buttonI:active a {
                 color: #f5f3f3;
-            } 
+            }
+            
+
+
 
 
             .form-control {
@@ -523,7 +528,7 @@ body{
                 <a href="inscription.html" class="button_barre"  > <b>inscription</b> <i class="fa-solid fa-scroll" style="margin:0px 0px 5px 5px;"></i></a>
                 
                 <a href="#" class="button_barre" ><b> groups</b> <i style="margin: 0px 0px 4px 3px;" class="fa-solid fa-user-group" ></i> </a>
-                <a href="#" class="button_barre" style="margin-left: 260px;" ><i class="fa-solid fa-circle-info" style="margin:0px 0px 0px 5px;"></i></a>   
+                <a href="#targetDiv2" class="button_barre" style="margin-left: 260px;" ><i class="fa-solid fa-circle-info" style="margin:0px 0px 0px 5px;"></i></a>   
             </div> <br>
             
         </div>
@@ -553,7 +558,7 @@ body{
 
         <br>
 
-        <div style="display: flex; margin: 150px 2px -152px 2px; justify-content: space-evenly;">
+        <div style="display: flex; flex-wrap: wrap; margin: 150px 2px -152px -25px; justify-content: space-evenly;">
             <div style="height: 400px;width: 350px;">
                 <div style="margin: 0px 0px 0px 135px;"><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i></div>
                 <p style="width: 300px; text-align: center; margin: 20px 0px 0px 28px;font-size: 19px;">"Wow, what an incredible trip! The breathtaking landscapes, vibrant cultures, and unforgettable experiences made this journey truly remarkable. From hiking through lush rainforests to exploring ancient ruins, every moment was filled with awe and wonder. The warm hospitality of the locals added an extra layer of charm to the trip. I can't wait to go back and discover more hidden gems in this captivating destination!"</p>
@@ -563,7 +568,6 @@ body{
                 </div>
                 <p style="margin: -23px 0px 0px 150px;color: gray;width: 300px;">Trip to Greece in June with Rita</p>
             </div>
-
             <div style="height: 400px;width: 350px;">
                 <div style="margin: 0px 0px 0px 150px;"><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i></div>
                 <p style="width: 330px; text-align: center; margin: 20px 0px 0px 28px;font-size: 19px;">"I had the most amazing time on this trip! The itinerary was thoughtfully planned, allowing us to immerse ourselves in the local culture and traditions. The bustling markets, aromatic street food, and vibrant festivals created a tapestry of sights, sounds, and flavors. The knowledgeable guides provided fascinating insights into the history and significance of each place we visited. It was a truly enriching experience that left me with a deeper appreciation for the beauty and diversity of our world."</p>
@@ -573,7 +577,6 @@ body{
                 </div>
                 <p style="margin: -23px 0px 0px 150px;color: gray; width: 300px;">Sled Dog tour in Sweden with Kathi</p>
             </div>
-
             <div style="height: 400px;width: 350px;">
                 <div style="margin: 0px 0px 0px 160px;"><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i></div>
                 <p style="width: 350px; text-align: center; margin: 20px 0px 0px 28px;font-size: 19px;" >"This trip exceeded all my expectations and left me with memories that will last a lifetime. From the moment we arrived, we were greeted with warm smiles and a genuine sense of hospitality. The accommodations were top-notch, offering incredible comfort and stunning views. Whether it was exploring ancient ruins or relaxing on pristine beaches, every day brought new adventures and discoveries. This trip was a perfect balance of relaxation, adventure, and cultural immersion. I'm already dreaming of my next visit to this magical destination!"</p>
@@ -587,13 +590,11 @@ body{
         
 
 
-        <p style="margin: 386px 0px 0px 305px; font-size: 30px;"><button class="shadow__btn"><b>Why travel with us?</b></button></p>
+        <p style="margin: 386px 0px 0px 305px; font-size: 30px;"><button class="shadow__btn">Why travel with us?</button><b></b></p>
 
         <br><br><br>
         <br><br><br>
         <br><br><br>
-
-        
 
             <div class="cards">
                 <div class="card red">
@@ -607,8 +608,6 @@ body{
                 </div>
             </div>
 
-
-
         <br><br><br>
         <br><br><br>
         <br><br><br>
@@ -617,7 +616,7 @@ body{
 
 
  
-    <p style="font-size: 30px;margin: 0px 0px 900px 37% ;font-weight: bold; ">An exemple one of our trips</p>
+    <p style="font-size: 30px;margin: 0px 0px 500px 37% ;font-weight: bold; ">An exemple one of our trips</p>
 
 
     <div class="trips">  
@@ -655,10 +654,11 @@ body{
         </div> 
     </div>
 
-    <div>
-        <p style="font-weight:bolder; color: rgb(27, 214, 221);margin: 300px 0px 80px 0px;font-size: 40px; text-align: center;">Top destinations</p>
 
-        <div>
+<div>
+    <p style="font-weight:bolder; color: rgb(0, 0, 0);margin: 300px 0px 80px 0px;font-size: 40px; text-align: center;">Top destinations</p>
+    <div>
+        
             <div id="targetDiv" class="container2">
                 <div  class="box" style="margin-left: 20px;opacity: 0;animation-delay: 1s;display: inline-block;animation-name: faderight;animation-duration: 3s;animation-fill-mode: forwards;background-image: url('images/Greece.jpg');background-size: 600px 500px;background-repeat: no-repeat;background-attachment: fixed;"> </div>
                 <div  class="box" style="margin-left: 20px;opacity: 0;animation-delay: 2.5s;display: inline-block;animation-name: faderight;animation-duration: 3s;animation-fill-mode: forwards;background-image: url('images/pexels-mark-neal-2225442.jpg');background-size: 500px 500px;background-repeat: no-repeat;background-attachment: fixed;"></div>
@@ -666,29 +666,28 @@ body{
                 <div  class="box" style="margin-left: 20px;opacity: 0;animation-delay: 6s;display: inline-block;animation-name: faderight;animation-duration: 3s;animation-fill-mode: forwards;background-image: url('images/France.jpg');background-size: 400px 480px;background-repeat: no-repeat;background-attachment: fixed;"></div>
             </div>
 
-            <div  style="display: flex; justify-content: space-around; ">
-                <div class="containerX">
-                    <div class="buttonI"><a href="https://www.google.com/search?q=GREECE&sca_esv=4cfa0bda60f78d2e&rlz=1C1SJWC_frMA1062MA1062&sxsrf=ACQVn0-isqGpjmyz-QCcUClE6hbuQWcIxw%3A1707775503266&ei=D5bKZdniD5eR9u8PxtuUwAo&ved=0ahUKEwiZpunB56aEAxWXiP0HHcYtBagQ4dUDCBA&uact=5&oq=GREECE&gs_lp=Egxnd3Mtd2l6LXNlcnAiBkdSRUVDRTIQEC4YgAQYigUYQxixAxiDATIKEAAYgAQYigUYQzIKEAAYgAQYFBiHAjIKEC4YQxiABBiKBTIKEC4YQxiABBiKBTIKEC4YgAQYigUYQzIKEAAYgAQYigUYQzIFEAAYgAQyBRAAGIAEMggQABiABBjLATIfEC4YgAQYigUYQxixAxiDARiXBRjcBBjeBBjgBNgBAUivCFAAWOkGcAB4AZABAJgBqAGgAa0HqgEDMC42uAEDyAEA-AEBwgIKECMYgAQYigUYJ8ICFhAuGIAEGIoFGEMYsQMYgwEYxwEY0QPCAhAQABiABBiKBRhDGLEDGIMBwgILEAAYgAQYsQMYgwHCAg0QLhiABBiKBRhDGNQCwgIQEC4YQxiDARixAxiABBiKBcICExAuGIAEGIoFGEMYsQMYgwEY1ALCAh8QLhhDGIMBGLEDGIAEGIoFGJcFGNwEGN4EGOAE2AEBwgIHEAAYgAQYCsICGRAuGIAEGIoFGEMYlwUY3AQY3gQY4ATYAQHiAwQYACBBugYGCAEQARgU&sclient=gws-wiz-serp">GREECE</a></div>
-                </div>
-                <div class="containerX">
-                    <div class="buttonI"><a href="https://www.google.com/search?q=ITALY&sca_esv=4cfa0bda60f78d2e&rlz=1C1SJWC_frMA1062MA1062&sxsrf=ACQVn09UGDiIrc6HhHvojEHG4ZnYI0PQqg%3A1707775620418&ei=hJbKZYSGGY2R9u8PyuikuAo&ved=0ahUKEwiE2Nf556aEAxWNiP0HHUo0CacQ4dUDCBA&uact=5&oq=ITALY&gs_lp=Egxnd3Mtd2l6LXNlcnAiBUlUQUxZMhAQLhhDGIMBGLEDGIAEGIoFMgoQABiABBiKBRhDMgoQABiABBiKBRhDMgoQABiABBiKBRhDMgoQABiABBiKBRhDMgoQABiABBiKBRhDMgoQABiABBiKBRhDMgoQABiABBiKBRhDMgoQABiABBiKBRhDMgoQLhiABBiKBRhDMh8QLhhDGIMBGLEDGIAEGIoFGJcFGNwEGN4EGOAE2AEBSI4dUL0FWM4WcAJ4AZABBJgB4wKgAZARqgEHMC40LjUuMbgBA8gBAPgBAagCD8ICChAjGIAEGIoFGCfCAgUQLhiABMICFBAuGIAEGJcFGNwEGN4EGOAE2AEBwgIHECMY6gIYJ8ICGRAuGEMY1AIYgAQYigUYyAMY6gIYtALYAQLCAhYQLhiABBiKBRhDGMgDGOoCGLQC2AECwgIWEC4YQxiABBiKBRjIAxjqAhi0AtgBAsICGRAuGIAEGIoFGEMY1AIYyAMY6gIYtALYAQLCAgQQIxgnwgINEC4YgAQYigUYQxjUAsICCxAAGIAEGLEDGIMBwgIIEAAYgAQYsQPiAwQYACBBiAYBugYGCAEQARgUugYGCAIQARgI&sclient=gws-wiz-serp">ITALY</a></div>
-                </div>
-                <div class="containerX">
-                    <div class="buttonI"><a href="https://www.google.com/search?q=MOROCCO&rlz=1C1SJWC_frMA1062MA1062&oq=MOROCCO&gs_lcrp=EgZjaHJvbWUyDggAEEUYJxg5GIAEGIoFMhAIARAuGK8BGMcBGLEDGIAEMg8IAhAuGEMYsQMYgAQYigUyDAgDEAAYQxiABBiKBTIMCAQQABhDGIAEGIoFMgwIBRAAGEMYgAQYigUyDAgGEAAYQxiABBiKBTIKCAcQABixAxiABDIMCAgQABhDGIAEGIoFMg8ICRAAGEMYsQMYgAQYigXSAQk0MDc2ajBqMTWoAgCwAgA&sourceid=chrome&ie=UTF-8">MAROC</a></div>
-                </div>
-                <div class="containerX">
-                    <div class="buttonI"><a href="https://www.google.com/search?q=FRANCE&sca_esv=4cfa0bda60f78d2e&rlz=1C1SJWC_frMA1062MA1062&sxsrf=ACQVn0-isqGpjmyz-QCcUClE6hbuQWcIxw%3A1707775503266&ei=D5bKZdniD5eR9u8PxtuUwAo&ved=0ahUKEwiZpunB56aEAxWXiP0HHcYtBagQ4dUDCBA&uact=5&oq=FRANCE&gs_lp=Egxnd3Mtd2l6LXNlcnAiBkZSQU5DRTIKEAAYgAQYigUYQzINEC4YgAQYigUYQxixAzIKEAAYgAQYigUYQzIKEAAYgAQYigUYQzIQEAAYgAQYigUYQxixAxiDATIKEAAYgAQYigUYQzIKEAAYgAQYigUYQzIKEAAYgAQYigUYQzIKEAAYgAQYigUYQzIKEC4YgAQYigUYQ0i6IFCUBVjzHnADeAGQAQGYAawBoAGuB6oBAzAuNrgBA8gBAPgBAagCEsICChAAGEcY1gQYsAPCAg0QABiABBiKBRhDGLADwgIOEAAY5AIY1gQYsAPYAQHCAhMQLhiABBiKBRhDGMgDGLAD2AECwgITEC4YQxiABBiKBRjIAxiwA9gBAsICBxAjGOoCGCfCAhMQABiABBiKBRhDGOoCGLQC2AEDwgIWEC4YQxiABBiKBRjIAxjqAhi0AtgBAsICFhAuGIAEGIoFGEMYyAMY6gIYtALYAQLCAgoQIxiABBiKBRgnwgIMECMYgAQYigUYExgnwgIWEC4YgAQYigUYQxixAxiDARjHARjRA8ICCxAAGIAEGLEDGIMBwgIEECMYJ-IDBBgAIEGIBgGQBhO6BgYIARABGAm6BgYIAhABGAi6BgYIAxABGAE&sclient=gws-wiz-serp">FRANCE</a></div>
-                </div>
+        <div  style="display: flex; justify-content: space-around; ">
+            <div class="containerX">
+                <div class="buttonI"><a href="#">GREECE</a></div>
+            </div>
+            <div class="containerX">
+                <div class="buttonI"><a href="#">ITALY</a></div>
+            </div>
+            <div class="containerX">
+                <div class="buttonI"><a href="#">MAROC</a></div>
+            </div>
+            <div class="containerX">
+                <div class="buttonI"><a href="#">FRANCE</a></div>
             </div>
         </div>
     </div>
-
+</div>
 
 
 
     
 
-    <div class="title-container">
+    <div class="title-container" ></a>>
         <h2>Where do you wanna travel</h2>
     </div>
 
@@ -710,7 +709,7 @@ body{
 
         
         
-    <footer>
+    <footer id="targetDiv2">
         <div class="footer-content">
             <div class="footer-section">
                 <h2>About Us</h2>
@@ -738,57 +737,3 @@ body{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <div style="display: inline-block; margin-left: 5%;">
-    <p style="font-size: 30px;font-weight: bolder;"><i class="fa-solid fa-star" style="color: rgb(14, 170, 14); margin: 400px 20px 0px 450px; width: 20px; height: 20px; "></i>4.6/5 </p>         
-    <p style="color: rgb(140, 140, 140); font-size: 24px; margin: -30px 0px 0px 455px; font-weight: bolder; "> Rated on TrustPilot</p>   
-</div>
-
-<div style="display: inline-block;">
-    <p style="font-size: 30px;font-weight: bolder;"><i class="fa-solid fa-location-dot" style="color: rgb(88, 158, 209); margin: 400px 20px 0px 40px; width: 20px; height: 20px; "> </i>5,224+</p>         
-    <p style="color: rgb(140, 140, 140); font-size: 24px; margin: -30px 0px 0px 40px; font-weight: bolder; "> Completed Trips</p>   
-</div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
