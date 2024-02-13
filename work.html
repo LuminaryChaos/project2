@@ -21,22 +21,47 @@
                 scroll-behavior: smooth;
             }
             
-            .container{
+            .container {
                 display: flex;
                 justify-content: space-between;
-                width: 100%;
-                height: 890px;
                 align-items: start;
                 background-color: rgb(20, 171, 222);
+                padding: 20px;
+                height: 890px;
+
             }
 
-            .brand{
+            .brand {
                 font-size: 30px;
-                padding: 30px;
                 color: white;
-                width: 260px;
             }
-            
+
+            .nav-list {
+                display: flex;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                font-size: 20px;
+            }
+
+            .button_barre {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 49px;
+                width: 110px;
+                margin-left: 80px;
+                color: rgb(237, 230, 230);
+                margin-top: 15px;
+                border-radius: 40px;
+                text-decoration: none;
+                transition: color 0.3s ease-in-out;
+            }
+
+            .button_barre:hover {
+                color: rgb(0, 0, 0);
+            }
+
             .div2{         
                 width: auto;
                 margin-left: 200px;
@@ -46,24 +71,6 @@
                 align-items: center;   
                 justify-content: center;
             }
-
-            .button_barre{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                height: 49px;
-                width: 110px;
-                margin-left: 40px;
-                color: rgb(237, 230, 230);
-                border-radius: 40px;
-                text-decoration: none; 
-            }
-
-
-            .button_barre:hover{
-                color: rgb(0, 0, 0);
-            }
-
 
             .div_first_pic{
                 background-color: white;
@@ -519,19 +526,23 @@
 
     <body>
 
-        <div class="container">
-            <div class="brand"> Join <br> My Trip
+
+            <div class="container">
+                <div class="brand">Join <br> My Trip
                 <i class="fa-solid fa-person-hiking move-icon"></i>
-            </div>
-            <div class="div2" >
-                <a href="#targetDiv" class="button_barre"   ><b>Top trips</b>  <i class="fa-solid fa-images" style="margin:0px 0px 2px 5px;"></i></a>
-                <a href="inscription.html" class="button_barre"  > <b>inscription</b> <i class="fa-solid fa-scroll" style="margin:0px 0px 5px 5px;"></i></a>
+                </div>
                 
-                <a href="#" class="button_barre" ><b> groups</b> <i style="margin: 0px 0px 4px 3px;" class="fa-solid fa-user-group" ></i> </a>
-                <a href="#targetDiv2" class="button_barre" style="margin-left: 260px;" ><i class="fa-solid fa-circle-info" style="margin:0px 0px 0px 5px;"></i></a>   
-            </div> <br>
-            
-        </div>
+                <ul class="nav-list" >
+                <li><a href="#targetDiv" class="button_barre"><b>Top trips</b> <i class="fa-solid fa-images" style="margin:0px 0px 2px 5px;"></i></a></li>
+                <li><a href="inscription.html" class="button_barre"><b>Inscription</b> <i class="fa-solid fa-scroll" style="margin:0px 0px 5px 5px;"></i></a></li>
+                <li><a href="Guide.html" class="button_barre"><b>Guide</b> <i style="margin: 0px 0px 4px 3px;" class="fa-solid fa-user-group"></i></a></li>
+                <li><a href="#targetDiv2" class="button_barre"><b>Details</b><i class="fa-solid fa-circle-info" style="margin:0px 0px 0px 5px;"></i></a></li>
+                </ul>
+            </div>
+
+
+          
+          
 
 
 
@@ -687,7 +698,7 @@
 
     
 
-    <div class="title-container" ></a>>
+    <div class="title-container" ></a>
         <h2>Where do you wanna travel</h2>
     </div>
 
