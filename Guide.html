@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <title>Your Team</title>
+  <title>Team guide</title>
   <style>      
 
           body{
@@ -53,10 +53,7 @@
             box-sizing: border-box;
         }
 
-        .team-member {
-            border: 1px solid #ddd;
-            margin-bottom: 20px;
-        }
+
         
         .team-member {
             border: 1px solid #ddd;
@@ -67,6 +64,8 @@
           display: flex;
           justify-content: center;
         }
+
+ 
 
         .overflow-hidden {
             overflow: hidden;
@@ -84,9 +83,11 @@
           transform: scale(1.1,1.1);
         }
 
+
         .position-relative {
             position: relative;
         }
+
 
         .link {
             display: inline-block;
@@ -107,12 +108,13 @@
             border-bottom-color: #86B817;
             margin-left: 10px;
         }
-
         .link:hover {
             color: rgb(255, 255, 255);
             background-color: #86B817;
             margin-left: 10px;
         }
+
+
 
         .member-info {
             padding: 1.5rem;
@@ -129,9 +131,49 @@
         .small {
             font-size: 80%;
         }
+        
+        .about{
+          font-size: 70px;
+          margin-top: 60px;
+          animation: smooth-color-change 10s infinite;
+        }
 
 
-        .golbal-container {
+
+        .div-about {
+            font-weight: bold;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            line-height: 1.2;
+            color: grey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+
+
+
+
+
+
+        @keyframes smooth-color-change {
+            0% { color: #3498db; }
+            35% { color: #2ecc71; }
+            65% { color: #e74c3c; }
+            100% { color: #3498db; }
+          }
+
+
+
+
+
+
+
+
+          .golbal-container {
             padding-top: 3rem;
             padding-bottom: 3rem;
           }
@@ -183,7 +225,11 @@
             justify-content: space-around;
             flex-wrap: wrap;
           }
-        
+
+
+
+
+
 
 
 
@@ -192,7 +238,14 @@
 
 
 <body>
-  
+
+
+
+    <div class="div-about">
+      <p class="about">ABOUT</p>
+    </div>
+
+
     <div>
         <h2 class="travel-guide">________ travel guide ________</h2>
     </div>
@@ -289,47 +342,54 @@
 
           </div>
         </div>
-
-        <div class="golbal-container">
-          <div class="title-container">
-        
-            <div class="container-child">
-              <h1 class="title">Our Services</h1>
-            </div>
-            
-              <div class="contflx ">
-                <div class="service">
-                  <div class="box">
-                    <i class="fa fa-3x fa-globe"></i>
-                    <h5>WorldWide Tours</h5>
-                    <p>Explore the wonders of the world with our WorldWide Tours. Immerse yourself in diverse cultures, breathtaking landscapes, and unforgettable experiences.on a journey of discovery.</p>
-                  </div>
-                </div>
-              </div>
-        
-
-                <div class="contflx ">
-                    <div class="service">
-                        <div class="box">
-                            <i class="fa fa-3x fa-hotel"></i>
-                            <h5>Hotel Reservation</h5>
-                            <p>Indulge in luxury and comfort with our Hotel Reservation services. Whether you're planning a business trip or a leisurely getaway, we offer a curated selection .</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="contflx ">
-                  <div class="service">
-                      <div class="box">
-                          <i class="fa fa-3x fa-user "></i>
-                          <h5>Travel Guides</h5>
-                          <p>Embark on a journey of discovery with our expert Travel Guides. Whether you're an avid explorer or a first-time traveler, our guides are passionate</p>
-                      </div>
-                  </div>
-              </div>
         
       </div>
       
 </body>
 </html>
 
+<div class="golbal-container">
+  <div class="title-container">
+
+    <div class="container-child">
+      <h1 class="title">Our Services</h1>
+    </div>
+    
+
+
+    <div class="cont-of-4">
+
+
+      <div class="contflx ">
+        <div class="service">
+          <div class="box">
+            <i class="fa fa-3x fa-globe"></i>
+            <h5>WorldWide Tours</h5>
+            <p>Explore the wonders of the world with our WorldWide Tours. Immerse yourself in diverse cultures, breathtaking landscapes, and unforgettable experiences.on a journey of discovery.</p>
+          </div>
+        </div>
+      </div>
+
+
+
+        <div class="contflx ">
+            <div class="service">
+                <div class="box">
+                    <i class="fa fa-3x fa-hotel"></i>
+                    <h5>Hotel Reservation</h5>
+                    <p>Indulge in luxury and comfort with our Hotel Reservation services. Whether you're planning a business trip or a leisurely getaway, we offer a curated selection .</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contflx ">
+            <div class="service">
+                <div class="box">
+                    <i class="fa fa-3x fa-user "></i>
+                    <h5>Travel Guides</h5>
+                    <p>Embark on a journey of discovery with our expert Travel Guides. Whether you're an avid explorer or a first-time traveler, our guides are passionate</p>
+                </div>
+            </div>
+        </div>
+  </div>
+</div>
