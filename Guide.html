@@ -153,12 +153,6 @@
             margin-bottom: 20px;
         }
 
-
-
-
-
-
-
         @keyframes smooth-color-change {
             0% { color: #3498db; }
             35% { color: #2ecc71; }
@@ -168,14 +162,12 @@
 
 
 
-
-
-
-
-
           .golbal-container {
             padding-top: 3rem;
+            margin-top: 100px;
             padding-bottom: 3rem;
+            max-width: 100%;
+            overflow-x: hidden;
           }
 
           .title-container {
@@ -188,6 +180,16 @@
 
           .container-child {
             text-align: center;
+          }
+
+
+
+          
+          .container-child h1{
+            font-family: "Nunito", sans-serif;
+            font-weight: 800;
+            line-height: 1.2;
+            color: #2C3E50;
           }
 
           .section-title {
@@ -208,8 +210,9 @@
           }
 
           .service {
-            border: 1px solid #dee2e6;
+            border: 1px #dee2e6;
             border-radius: 0.25rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
           }
 
           .container-child {
@@ -224,7 +227,39 @@
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
+            margin-top: 100px;
           }
+
+          .box:hover {
+            color: white;
+            background-color: #86B817;
+          }
+          i:hover{
+            color: white; 
+          }
+
+          .box {
+            padding: 12px;
+            transition: color 0.3s;
+            background-color: #fff;
+          }
+
+          .box:hover {
+            color: white;
+            background-color: #86B817;
+          }
+
+          .box:hover i {
+            color: #fff;
+            transition: color ease-in;
+
+          }
+
+          .box i {
+            color: #86B817;
+          }
+
+
 
 
 
@@ -359,13 +394,12 @@
 
     <div class="cont-of-4">
 
-
       <div class="contflx ">
         <div class="service">
           <div class="box">
             <i class="fa fa-3x fa-globe"></i>
             <h5>WorldWide Tours</h5>
-            <p>Explore the wonders of the world with our WorldWide Tours. Immerse yourself in diverse cultures, breathtaking landscapes, and unforgettable experiences.on a journey of discovery.</p>
+            <p>Explore the wonders of the world with our WorldWide Tours. breathtaking landscapes, and unforgettable experiences.on a journey of discovery.</p>
           </div>
         </div>
       </div>
