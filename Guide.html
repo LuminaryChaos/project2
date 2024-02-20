@@ -35,7 +35,6 @@
       }
 
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
@@ -48,6 +47,7 @@
 
         .squad-containers {
             display: flex;
+            margin-top: 20px;
             max-width: 300px;
             padding: 0 1rem;
             box-sizing: border-box;
@@ -138,20 +138,6 @@
           animation: smooth-color-change 10s infinite;
         }
 
-
-
-        .div-about {
-            font-weight: bold;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            line-height: 1.2;
-            color: grey;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100px;
-            width: 100%;
-            margin-bottom: 20px;
-        }
 
         @keyframes smooth-color-change {
             0% { color: #3498db; }
@@ -261,8 +247,106 @@
 
 
 
+          footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            margin-top: 200px;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-section {
+            flex: 1;
+            padding: 0 20px;
+        }
+
+        .footer-section h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .footer-section p {
+            font-size: 14px;
+            line-height: 1.5;
+        }
 
 
+
+
+ 
+
+            .nav-list a:hover {
+                color: #86B817;
+                transition: color 1s ease-out;
+            }
+
+
+            .container {
+                display: flex;
+                justify-content: space-between;
+                align-items: start;
+                background: linear-gradient(rgba(20, 20, 31, .7), rgba(20, 20, 31, .7)) ,url('images/main-bg.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                padding: 20px;
+                height: 700px;
+
+            }
+
+            .brand {
+                font-size: 30px;
+                color: white;
+            }
+
+            .nav-list {
+                display: flex;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                font-size: 20px;
+            }
+
+            .button_barre {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 49px;
+                width: 110px;
+                margin-left: 80px;
+                color: rgb(237, 230, 230);
+                margin-top: 15px;
+                border-radius: 40px;
+                text-decoration: none;
+                transition: color 0.3s ease-in-out;
+            }    
+
+            .nav-list li a::after {
+              content: '';
+              display: block;
+              width: 0;
+              height: 2px;
+              background-color:#86B817;
+              position: absolute;
+              bottom: -20px;
+              left: 50%;
+              transition: width 0.5s ease-out, left 0.5s ease-out;
+            }
+
+
+
+        .nav-list li a:hover::after {
+            width: 105%;
+            left: 0;
+          }
+
+            
 
 
 
@@ -275,11 +359,30 @@
 <body>
 
 
+  <div class="cont-navbar">
+  
 
-    <div class="div-about">
-      <p class="about">ABOUT</p>
+    <div class="container">
+      <div class="brand">Join <br> My Trip
+      <i class="fa-solid fa-person-hiking move-icon"></i>
+      </div>
+      
+      <ul class="nav-list" >
+          <li><a href="#targetDiv" class="button_barre"><b>Top trips</b> <i class="fa-solid fa-images" style="margin:0px 0px 2px 5px;"></i></a></li>
+          <li><a href="inscription.html" class="button_barre"><b>Inscription</b> <i class="fa-solid fa-scroll" style="margin:0px 0px 5px 5px;"></i></a></li>
+          <li><a href="Guide.html" class="button_barre"><b>Guide</b> <i style="margin: 0px 0px 4px 3px;" class="fa-solid fa-user-group"></i></a></li>
+          <li><a href="#targetDiv2" class="button_barre"><b>Details</b><i class="fa-solid fa-circle-info" style="margin:0px 0px 0px 5px;"></i></a></li>
+      </ul>
+
+  </div>
+    <div style="margin-top: -620px;display:  flex; justify-content: center; align-items: center; height: 600px; color: rgb(224, 223, 223); font-size: 75px;">
+      <p style="font-weight: 800;font-family: Nunito,sans-serif;">About-us</p>
     </div>
 
+  </div>
+
+    <br><br><br><br><br>
+ 
 
     <div>
         <h2 class="travel-guide">________ travel guide ________</h2>
@@ -427,3 +530,35 @@
         </div>
   </div>
 </div>
+
+
+
+
+
+    
+<footer>
+  <div class="footer-content">
+      <div class="footer-section">
+          <h2>About Us</h2>
+          <p>We always make sure that you will have an extremly great and unforgettable trip in your whole life.</p>
+      </div>
+      <div class="footer-section">
+          <h2>Contact</h2>
+          <p>Email: info@yourtrips.com</p>
+          <p>Phone: +1 (123) 456-7890</p>
+      </div>
+      <div class="footer-section">
+          <h2>Follow Us</h2>
+          <p>Stay connected on social media:</p>
+          <p>Facebook : Tripmakers</p>
+          <p>Youtube : GoldenTrips </p>
+          <p>Instagram : Tripmakers V-I-P</p>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
