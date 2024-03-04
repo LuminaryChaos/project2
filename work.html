@@ -28,6 +28,7 @@
                 background-color: rgb(20, 171, 222);
                 padding: 20px;
                 height: 890px;
+                width: 106.5vw;
 
             }
 
@@ -38,6 +39,7 @@
 
             .nav-list {
                 display: flex;
+                justify-content: space-around;
                 list-style: none;
                 margin: 0;
                 padding: 0;
@@ -47,10 +49,9 @@
             .button_barre {
                 display: flex;
                 align-items: center;
-                justify-content: center;
+                justify-content: end;
                 height: 49px;
-                width: 110px;
-                margin-left: 80px;
+                margin-left: 55px;
                 color: rgb(237, 230, 230);
                 margin-top: 15px;
                 border-radius: 40px;
@@ -471,9 +472,9 @@
                 color: #f5f3f3;
             }
             
-
-
-
+            .trips{
+                margin-top: 400px;
+            }
 
             .form-control {
                     position: relative;
@@ -520,8 +521,172 @@
                 color: rgb(61, 206, 61);
                 transform: translateY(-30px);
             }
+            #checkbox2 {
+                display: none;
+            }
 
+            .toggle2 {
+                position: relative;
+                width: 60px;
+                height: 60px;
+                cursor: pointer;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 12px;
+                transition-duration: .5s;
+            }
+
+            .bars {
+                width: 100%;
+                height: 6px;
+                background-color: rgb(92, 176, 255);
+                border-radius: 6px;
+            }
+
+            #bar5 {
+                transition-duration: .8s;
+            }
+
+            #bar4,#bar6 {
+                width: 80%;
+            }
+
+            #checkbox2:checked + .toggle2 .bars {
+                position: absolute;
+                transition-duration: .5s;
+            }
+
+            #checkbox2:checked + .toggle2 #bar5 {
+                transform: scaleX(0);
+                transition-duration: .5s;
+            }
+
+            #checkbox2:checked + .toggle2 #bar4 {
+                width: 100%;
+                transform: rotate(45deg);
+                transition-duration: .5s;
+            }
+
+            #checkbox2:checked + .toggle2 #bar6 {
+                width: 100%;
+                transform: rotate(-45deg);
+                transition-duration: .5s;
+            }
+
+            #checkbox2:checked + .toggle2 {
+                transition-duration: .5s;
+                transform: rotate(180deg);
+            }
+
+            #X_btn{
+                display: none;
+            }
+
+            @media screen and (max-width : 1000px) {
+                .nav-list{
+                    display: none;
+                }
+                .container{
+                    width: 110vw;
+                }
+
+            }
+            .rating{
+                display: flex;
+                 justify-content: center;
+                  margin-right: 380px;
+            }
+            .brand-title{
+                color: white; margin: -400px 0px 0px 55%;
+                font-weight: bold;
+                font-size: 60px;
+                width: 400px;
+            }
+            #secondP{
+                color: rgb(140, 140, 140);
+                font-size: 24px;
+                margin: -30px 0px 0px 40px;
+                font-weight: bolder;
+            }
+            .rating p:first-child{
+                font-size: 30px;
+                font-weight: bolder;
+            } 
+            .rating p:first-child i{
+                color: rgb(14, 170, 14);
+                margin: 400px 20px 0px 450px;
+                width: 20px;
+                height: 20px; 
+            } 
+            .rating p + p{
+                color: rgb(140, 140, 140); 
+                font-size: 24px; 
+                margin: -30px 0px 0px 455px; 
+                font-weight: bolder;
+            } 
+            .opinions{
+                display: flex; 
+                flex-wrap: wrap; 
+                margin: 150px 2px -152px -25px; 
+                justify-content: space-evenly;
+            }
+            .person-opinion{
+                height: 400px;
+                width: 350px;
+            }
+
+            .why_travel{
+                display: flex;
+                font-size: 30px;
+                justify-content: center;
+            }
+            .p_exemple{
+                font-size: 30px;
+                font-weight: bold;color: #2C3E50;
+                font-family:sans-serif; 
+                font-weight: 800;
+            }
             
+            .first_exp{
+                display: flex; align-items: center; justify-content: start;
+            }
+            .first_exp img{
+                width: 500px; height: 500px; margin-left: -430px; border-radius: 25px;
+            }
+            .first_exp p:nth-of-type(2){
+                text-align: center;
+                display: inline-block; 
+                vertical-align: 190px; 
+                margin-left: 20px;
+                font-size: 30px;color: rgb(52, 52, 52)
+            }
+           
+            .first_exp i:nth-of-type(1){
+                font-size: 70px; 
+                margin: 50px 0px 0px 650px;  
+                rotate:39rad;
+                color: gray;
+            }
+            .first_exp i:nth-of-type(2){
+                font-size: 70px; 
+                margin: 90px 0px 0px 700px;  
+                rotate: 45rad;
+                color: gray
+            }
+            .first_exp i:nth-of-type(3){
+                font-size: 70px; 
+                margin: 85px 0px 0px 800px;  
+                rotate: 1rad;
+                color: gray
+            }
+            .first_exp i:nth-of-type(4){
+                font-size: 70px; 
+                margin: 90px 0px 0px 900px;  
+                rotate: 190rad;
+                color: gray
+            }
         </style>
 
     </head>
@@ -531,48 +696,49 @@
 
             <div class="container">
                 <div class="brand">Join <br> My Trip
-                <i class="fa-solid fa-person-hiking move-icon"></i>
-                </div>
+                    <i class="fa-solid fa-person-hiking move-icon"></i>
+                </div>  
                 
-                <ul class="nav-list" >
-                <li><a href="#targetDiv" class="button_barre"><b>Top trips</b> <i class="fa-solid fa-images" style="margin:0px 0px 2px 5px;"></i></a></li>
-                <li><a href="inscription.html" class="button_barre"><b>Inscription</b> <i class="fa-solid fa-scroll" style="margin:0px 0px 5px 5px;"></i></a></li>
-                <li><a href="Guide.html" class="button_barre"><b>Guide</b> <i style="margin: 0px 0px 4px 3px;" class="fa-solid fa-user-group"></i></a></li>
-                <li><a href="#targetDiv2" class="button_barre"><b>Details</b><i class="fa-solid fa-circle-info" style="margin:0px 0px 0px 5px;"></i></a></li>
+                <ul class="nav-list">
+                    <li><a href="#targetDiv" class="button_barre"><b>Top trips</b> <i class="fa-solid fa-images" style="margin:0px 0px 2px 5px;"></i></a></li>
+                    <li><a href="inscription.html" class="button_barre"><b>Inscription</b> <i class="fa-solid fa-scroll" style="margin:0px 0px 5px 5px;"></i></a></li>
+                    <li><a href="Guide.html" class="button_barre"><b>Guide</b> <i style="margin: 0px 0px 4px 3px;" class="fa-solid fa-user-group"></i></a></li>
+                    <li><a href="Package.html" class="button_barre"><b>Package</b> <i class="fa-solid fa-box-archive"></i>  </a></li>
+                    <li><a href="#targetDiv2" class="button_barre"><b>Details</b><i class="fa-solid fa-circle-info" style="margin:0px 0px 0px 5px;"></i></a></li>
                 </ul>
+                <div id="X_btn">
+                    <input id="checkbox2" type="checkbox">
+                    <label class="toggle toggle2" for="checkbox2">
+                    <div id="bar4" class="bars"></div>
+                    <div id="bar5" class="bars"></div>
+                    <div id="bar6" class="bars"></div>
+                </label>
+                </div>
             </div>
 
+            <div>
+                <div class="div_first_pic">
+                    <div class="first_pic"></div>
+                </div>                
+                <p class="brand-title" > Experience <br> <br> Group Trips </p>
+            </div>
 
-          
-          
-
-
-
-
-        <div class="div_first_pic">
-            <div class="first_pic"></div>
+    <div class="rating">
+        <div>
+            <p><i class="fa-solid fa-star"></i>4.6/5 </p>         
+            <p> Rated on TrustPilot</p>   
         </div>
 
-
-        <p style="color: white; margin: -400px 0px 0px 55%; font-weight: bold;font-size: 60px; width: 400px;"> Experience <br> <br> Group Trips </p>
-
-
-    <div style="display: flex; justify-content: center; margin-right: 380px;">
-        <div >
-            <p style="font-size: 30px;font-weight: bolder;"><i class="fa-solid fa-star" style="color: rgb(14, 170, 14); margin: 400px 20px 0px 450px; width: 20px; height: 20px; "></i>4.6/5 </p>         
-            <p style="color: rgb(140, 140, 140); font-size: 24px; margin: -30px 0px 0px 455px; font-weight: bolder; "> Rated on TrustPilot</p>   
-        </div>
-
-        <div >
-            <p style="font-size: 30px;font-weight: bolder;"><i class="fa-solid fa-location-dot" style="color: rgb(88, 158, 209); margin: 400px 20px 0px 40px; width: 20px; height: 20px; "> </i>5,224+</p>         
-            <p style="color: rgb(140, 140, 140); font-size: 24px; margin: -30px 0px 0px 40px; font-weight: bolder; "> Completed Trips</p>   
+        <div>
+            <p><i class="fa-solid fa-location-dot" style="color: rgb(88, 158, 209); margin: 400px 20px 0px 40px; width: 20px; height: 20px; "> </i>5,224+</p>         
+            <p id="secondP"> Completed Trips</p>   
         </div>
     </div>
 
         <br>
 
-        <div style="display: flex; flex-wrap: wrap; margin: 150px 2px -152px -25px; justify-content: space-evenly;">
-            <div style="height: 400px;width: 350px;">
+        <div class="opinions">
+            <div class="person-opinion">
                 <div style="margin: 0px 0px 0px 135px;"><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i></div>
                 <p style="width: 300px; text-align: center; margin: 20px 0px 0px 28px;font-size: 19px;">"Wow, what an incredible trip! The breathtaking landscapes, vibrant cultures, and unforgettable experiences made this journey truly remarkable. From hiking through lush rainforests to exploring ancient ruins, every moment was filled with awe and wonder. The warm hospitality of the locals added an extra layer of charm to the trip. I can't wait to go back and discover more hidden gems in this captivating destination!"</p>
                 <div style="display: flex;margin-left: 50px;margin-top: 45px;">
@@ -581,7 +747,7 @@
                 </div>
                 <p style="margin: -23px 0px 0px 150px;color: gray;width: 300px;">Trip to Greece in June with Rita</p>
             </div>
-            <div style="height: 400px;width: 350px;">
+            <div >
                 <div style="margin: 0px 0px 0px 150px;"><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i></div>
                 <p style="width: 330px; text-align: center; margin: 20px 0px 0px 28px;font-size: 19px;">"I had the most amazing time on this trip! The itinerary was thoughtfully planned, allowing us to immerse ourselves in the local culture and traditions. The bustling markets, aromatic street food, and vibrant festivals created a tapestry of sights, sounds, and flavors. The knowledgeable guides provided fascinating insights into the history and significance of each place we visited. It was a truly enriching experience that left me with a deeper appreciation for the beauty and diversity of our world."</p>
                 <div style="display: flex;margin-left: 50px;margin-top: 20px;">
@@ -590,7 +756,7 @@
                 </div>
                 <p style="margin: -23px 0px 0px 150px;color: gray; width: 300px;">Sled Dog tour in Sweden with Kathi</p>
             </div>
-            <div style="height: 400px;width: 350px;">
+            <div>
                 <div style="margin: 0px 0px 0px 160px;"><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i></div>
                 <p style="width: 350px; text-align: center; margin: 20px 0px 0px 28px;font-size: 19px;" >"This trip exceeded all my expectations and left me with memories that will last a lifetime. From the moment we arrived, we were greeted with warm smiles and a genuine sense of hospitality. The accommodations were top-notch, offering incredible comfort and stunning views. Whether it was exploring ancient ruins or relaxing on pristine beaches, every day brought new adventures and discoveries. This trip was a perfect balance of relaxation, adventure, and cultural immersion. I'm already dreaming of my next visit to this magical destination!"</p>
                 <div style="display: flex;margin-left: 50px;">
@@ -601,9 +767,19 @@
             </div>
         </div>
         
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
+        <br><br><br> 
+        <br><br><br>
+        
 
 
-        <p style="margin: 386px 0px 0px 305px; font-size: 30px;"><button class="shadow__btn">Why travel with us?</button><b></b></p>
+            <div class="why_travel">
+                <button class="shadow__btn">Why travel with us?</button>
+            </div>
 
         <br><br><br>
         <br><br><br>
@@ -626,44 +802,49 @@
         <br><br><br>
         <br><br><br>
 
-
-
- 
-    <p style="font-size: 30px;margin: 0px 0px 500px 32% ;font-weight: bold;color: #2C3E50;font-family:sans-serif; font-weight: 800; ">An exemple one of our trips</p>
+            <div class="why_travel">
+                    <p class="p_exemple">An exemple one of our trips</p>
+            </div>
 
 
     <div class="trips">  
-        <div style="display: flex; align-items: center; justify-content: start;">
+
+        <div class="first_exp">
             <p class="my01">01</p>
-            <img src="images/museum.jpg" alt="" style="width: 500px; height: 500px; margin-left: -430px; border-radius: 25px;">
-            <p style="text-align: center;display: inline-block; vertical-align: 190px; margin-left: 20px; font-size: 30px;color: rgb(52, 52, 52)">𝒲𝒽𝑒𝓉𝒽𝑒𝓇 𝓎𝑜𝓊'𝓇𝑒 𝓅𝒶𝓈𝓈𝒾𝑜𝓃𝒶𝓉𝑒 𝒶𝒷𝑜𝓊𝓉 𝒶𝓇𝓉, 𝓈𝒸𝒾𝑒𝓃𝒸𝑒, 𝑜𝓇 𝒽𝒾𝓈𝓉𝑜𝓇𝓎, 𝑜𝓊𝓇 𝓂𝓊𝓈𝑒𝓊𝓂 𝓉𝑜𝓊𝓇𝓈 𝒸𝒶𝓉𝑒𝓇 𝓉𝑜 𝒹𝒾𝓋𝑒𝓇𝓈𝑒 𝒾𝓃𝓉𝑒𝓇𝑒𝓈𝓉𝓈. 𝒞𝒶𝓅𝓉𝓊𝓇𝑒 𝓂𝑜𝓂𝑒𝓃𝓉𝓈 𝑜𝒻 𝒶𝓌𝑒 𝒶𝓃𝒹 𝒾𝓃𝓈𝓅𝒾𝓇𝒶𝓉𝒾𝑜𝓃 𝒶𝓈 𝓎𝑜𝓊 𝓌𝒶𝓃𝒹𝑒𝓇 𝓉𝒽𝓇𝑜𝓊𝑔𝒽 𝓉𝒽𝑒 𝒽𝒶𝓁𝓁𝑜𝓌𝑒𝒹 𝒽𝒶𝓁𝓁𝓈 𝑜𝒻 𝒸𝓊𝓁𝓉𝓊𝓇𝒶𝓁 𝒾𝓃𝓈𝓉𝒾𝓉𝓊𝓉𝒾𝑜𝓃𝓈. 𝒯𝒶𝓀𝑒 𝒶 𝓈𝓉𝑒𝓅 𝒷𝒶𝒸𝓀 𝒾𝓃 𝓉𝒾𝓂𝑒 𝑜𝓇 𝑒𝓂𝒷𝓇𝒶𝒸𝑒 𝓉𝒽𝑒 𝒸𝓊𝓉𝓉𝒾𝓃𝑔-𝑒𝒹𝑔𝑒 𝒾𝓃𝓃𝑜𝓋𝒶𝓉𝒾𝑜𝓃𝓈 𝑜𝒻 𝓉𝒽𝑒 𝓅𝓇𝑒𝓈𝑒𝓃𝓉.</p>
+            <img src="images/museum.jpg">
+            <p>𝒲𝒽𝑒𝓉𝒽𝑒𝓇 𝓎𝑜𝓊'𝓇𝑒 𝓅𝒶𝓈𝓈𝒾𝑜𝓃𝒶𝓉𝑒 𝒶𝒷𝑜𝓊𝓉 𝒶𝓇𝓉, 𝓈𝒸𝒾𝑒𝓃𝒸𝑒, 𝑜𝓇 𝒽𝒾𝓈𝓉𝑜𝓇𝓎, 𝑜𝓊𝓇 𝓂𝓊𝓈𝑒𝓊𝓂 𝓉𝑜𝓊𝓇𝓈 𝒸𝒶𝓉𝑒𝓇 𝓉𝑜 𝒹𝒾𝓋𝑒𝓇𝓈𝑒 𝒾𝓃𝓉𝑒𝓇𝑒𝓈𝓉𝓈. 𝒞𝒶𝓅𝓉𝓊𝓇𝑒 𝓂𝑜𝓂𝑒𝓃𝓉𝓈 𝑜𝒻 𝒶𝓌𝑒 𝒶𝓃𝒹 𝒾𝓃𝓈𝓅𝒾𝓇𝒶𝓉𝒾𝑜𝓃 𝒶𝓈 𝓎𝑜𝓊 𝓌𝒶𝓃𝒹𝑒𝓇 𝓉𝒽𝓇𝑜𝓊𝑔𝒽 𝓉𝒽𝑒 𝒽𝒶𝓁𝓁𝑜𝓌𝑒𝒹 𝒽𝒶𝓁𝓁𝓈 𝑜𝒻 𝒸𝓊𝓁𝓉𝓊𝓇𝒶𝓁 𝒾𝓃𝓈𝓉𝒾𝓉𝓊𝓉𝒾𝑜𝓃𝓈. 𝒯𝒶𝓀𝑒 𝒶 𝓈𝓉𝑒𝓅 𝒷𝒶𝒸𝓀 𝒾𝓃 𝓉𝒾𝓂𝑒 𝑜𝓇 𝑒𝓂𝒷𝓇𝒶𝒸𝑒 𝓉𝒽𝑒 𝒸𝓊𝓉𝓉𝒾𝓃𝑔-𝑒𝒹𝑔𝑒 𝒾𝓃𝓃𝑜𝓋𝒶𝓉𝒾𝑜𝓃𝓈 𝑜𝒻 𝓉𝒽𝑒 𝓅𝓇𝑒𝓈𝑒𝓃𝓉.</p>
+        </div>      
+        
+        <br><br>
+
+        <div class="first_exp_i"> 
+            <i class="fa-solid fa-shoe-prints" ></i>
+            <i class="fa-solid fa-shoe-prints" ></i>
+            <i class="fa-solid fa-shoe-prints" ></i>
+            <i class="fa-solid fa-shoe-prints" style="font-size: 70px; margin: 90px 0px 0px 900px;  rotate: 190rad;color: gray"></i>
         </div>
 
-        <br><br>
-        
-                <i class="fa-solid fa-shoe-prints" style="font-size: 70px; margin: 50px 0px 0px 650px;  rotate:39rad;color: gray"></i>
-                <i class="fa-solid fa-shoe-prints" style="font-size: 70px; margin: 90px 0px 0px 700px;  rotate: 45rad;color: gray"></i>
-                <i class="fa-solid fa-shoe-prints" style="font-size: 70px; margin: 85px 0px 0px 800px;  rotate: 1rad;color: gray"></i>
-                <i class="fa-solid fa-shoe-prints" style="font-size: 70px; margin: 90px 0px 0px 900px;  rotate: 190rad;color: gray"></i>
-
-        <p class="my02">02</p>
-        <div style="display: flex; align-items: center; justify-content: end; margin: 50px;">
-                <p style="display: inline-block; vertical-align: 190px; margin: 0px 30px 0px 0px; font-size: 30px; margin-left: -30px;color: rgb(52, 52, 52); text-align: center;"> 𝒲𝒽𝑒𝓉𝒽𝑒𝓇 𝓎𝑜𝓊'𝓇𝑒 𝒶 𝓈𝑒𝒶𝓈𝑜𝓃𝑒𝒹 𝓇𝒾𝒹𝑒𝓇 𝑜𝓇 𝒶 𝒻𝒾𝓇𝓈𝓉-𝓉𝒾𝓂𝑒 𝒶𝒹𝓋𝑒𝓃𝓉𝓊𝓇𝑒𝓇, 𝑜𝓊𝓇 𝒿𝑒𝓉𝓈𝓀𝒾 𝓉𝑜𝓊𝓇𝓈 𝓅𝓇𝑜𝓂𝒾𝓈𝑒 𝒶𝓃 𝓊𝓃𝒻𝑜𝓇𝑔𝑒𝓉𝓉𝒶𝒷𝓁𝑒 𝑒𝓍𝓅𝑒𝓇𝒾𝑒𝓃𝒸𝑒. 𝒫𝒾𝒸𝓉𝓊𝓇𝑒 𝓎𝑜𝓊𝓇𝓈𝑒𝓁𝒻 𝑔𝓁𝒾𝒹𝒾𝓃𝑔 𝒶𝒸𝓇𝑜𝓈𝓈 𝒸𝓇𝓎𝓈𝓉𝒶𝓁-𝒸𝓁𝑒𝒶𝓇 𝓌𝒶𝓉𝑒𝓇𝓈, 𝒸𝒶𝓇𝓋𝒾𝓃𝑔 𝓉𝒽𝓇𝑜𝓊𝑔𝒽 𝓌𝒶𝓋𝑒𝓈, 𝒶𝓃𝒹 𝑒𝓃𝒿𝑜𝓎𝒾𝓃𝑔 𝓉𝒽𝑒 𝒻𝓇𝑒𝑒𝒹𝑜𝓂 𝑜𝒻 𝓉𝒽𝑒 𝑜𝓅𝑒𝓃 𝓈𝑒𝒶. 𝒪𝓊𝓇 𝑒𝓍𝓅𝑒𝓇𝓉 𝒾𝓃𝓈𝓉𝓇𝓊𝒸𝓉𝑜𝓇𝓈 𝓌𝒾𝓁𝓁 𝑔𝓊𝒾𝒹𝑒 𝓎𝑜𝓊 𝓉𝒽𝓇𝑜𝓊𝑔𝒽 𝓉𝒽𝑒 𝒷𝒶𝓈𝒾𝒸𝓈, 𝑒𝓃𝓈𝓊𝓇𝒾𝓃𝑔 𝒶 𝓈𝒶𝒻𝑒 𝒶𝓃𝒹 𝑒𝓍𝒽𝒾𝓁𝒶𝓇𝒶𝓉𝒾𝓃𝑔 𝓇𝒾𝒹𝑒 𝒻𝑜𝓇 𝓅𝒶𝓇𝓉𝒾𝒸𝒾𝓅𝒶𝓃𝓉𝓈 𝑜𝒻 𝒶𝓁𝓁 𝓈𝓀𝒾𝓁𝓁 𝓁𝑒𝓋𝑒𝓁𝓈.</p>
-                <img src="images/jetski.jpg" alt="" style="width: 600px; height: 500px; border-radius: 25px;">
+        <div class="second_exp">
+            <p class="my02">02</p>
+            <div style="display: flex; align-items: center; justify-content: end; margin: 50px;">
+                    <p style="display: inline-block; vertical-align: 190px; margin: 0px 30px 0px 0px; font-size: 30px; margin-left: -30px;color: rgb(52, 52, 52); text-align: center;"> 𝒲𝒽𝑒𝓉𝒽𝑒𝓇 𝓎𝑜𝓊'𝓇𝑒 𝒶 𝓈𝑒𝒶𝓈𝑜𝓃𝑒𝒹 𝓇𝒾𝒹𝑒𝓇 𝑜𝓇 𝒶 𝒻𝒾𝓇𝓈𝓉-𝓉𝒾𝓂𝑒 𝒶𝒹𝓋𝑒𝓃𝓉𝓊𝓇𝑒𝓇, 𝑜𝓊𝓇 𝒿𝑒𝓉𝓈𝓀𝒾 𝓉𝑜𝓊𝓇𝓈 𝓅𝓇𝑜𝓂𝒾𝓈𝑒 𝒶𝓃 𝓊𝓃𝒻𝑜𝓇𝑔𝑒𝓉𝓉𝒶𝒷𝓁𝑒 𝑒𝓍𝓅𝑒𝓇𝒾𝑒𝓃𝒸𝑒. 𝒫𝒾𝒸𝓉𝓊𝓇𝑒 𝓎𝑜𝓊𝓇𝓈𝑒𝓁𝒻 𝑔𝓁𝒾𝒹𝒾𝓃𝑔 𝒶𝒸𝓇𝑜𝓈𝓈 𝒸𝓇𝓎𝓈𝓉𝒶𝓁-𝒸𝓁𝑒𝒶𝓇 𝓌𝒶𝓉𝑒𝓇𝓈, 𝒸𝒶𝓇𝓋𝒾𝓃𝑔 𝓉𝒽𝓇𝑜𝓊𝑔𝒽 𝓌𝒶𝓋𝑒𝓈, 𝒶𝓃𝒹 𝑒𝓃𝒿𝑜𝓎𝒾𝓃𝑔 𝓉𝒽𝑒 𝒻𝓇𝑒𝑒𝒹𝑜𝓂 𝑜𝒻 𝓉𝒽𝑒 𝑜𝓅𝑒𝓃 𝓈𝑒𝒶. 𝒪𝓊𝓇 𝑒𝓍𝓅𝑒𝓇𝓉 𝒾𝓃𝓈𝓉𝓇𝓊𝒸𝓉𝑜𝓇𝓈 𝓌𝒾𝓁𝓁 𝑔𝓊𝒾𝒹𝑒 𝓎𝑜𝓊 𝓉𝒽𝓇𝑜𝓊𝑔𝒽 𝓉𝒽𝑒 𝒷𝒶𝓈𝒾𝒸𝓈, 𝑒𝓃𝓈𝓊𝓇𝒾𝓃𝑔 𝒶 𝓈𝒶𝒻𝑒 𝒶𝓃𝒹 𝑒𝓍𝒽𝒾𝓁𝒶𝓇𝒶𝓉𝒾𝓃𝑔 𝓇𝒾𝒹𝑒 𝒻𝑜𝓇 𝓅𝒶𝓇𝓉𝒾𝒸𝒾𝓅𝒶𝓃𝓉𝓈 𝑜𝒻 𝒶𝓁𝓁 𝓈𝓀𝒾𝓁𝓁 𝓁𝑒𝓋𝑒𝓁𝓈.</p>
+                    <img src="images/jetski.jpg" alt="" style="width: 600px; height: 500px; border-radius: 25px;">
+            </div>
         </div>
 
         <br><br><br>
-
+            <div>
                 <i class="fa-solid fa-shoe-prints" style="font-size: 70px; margin: 50px 0px 0px 650px;  rotate: 8rad; color: gray;"></i>
                 <i class="fa-solid fa-shoe-prints" style="font-size: 70px; margin: 90px 0px 0px 579px;  rotate: 15rad;color: gray"></i>
                 <i class="fa-solid fa-shoe-prints" style="font-size: 70px;  rotate: 21rad; position: relative;top: 130px;left: -195px;color: gray"></i>
-
+            </div>
         <br><br><br>
-
-        <p class="my03">03</p>
-        <div style="display: flex; align-items: center; justify-content: start; margin: -70px 0px 0px 40px;">
-            <img src="images/pexels-vitor-lopes-15121201.jpg" alt="" style="width: 550px; height: 550px; border-radius: 25px; margin-left: 30px;" >
-            <p style=" width: 800px; display: inline-block; vertical-align: 190px; margin-left: 60px; font-size: 30px;color: rgb(52, 52, 52)" > 𝒯𝒽𝑒 𝓇𝑜𝓊𝓁𝑒𝓉𝓉𝑒 𝓌𝒽𝑒𝑒𝓁, 𝒶 𝓈𝓎𝓂𝒷𝑜𝓁 𝑜𝒻 𝒸𝒽𝒶𝓃𝒸𝑒 𝒶𝓃𝒹 𝒻𝑜𝓇𝓉𝓊𝓃𝑒, 𝒶𝓌𝒶𝒾𝓉𝓈 𝓎𝑜𝓊𝓇 𝒹𝒶𝓇𝒾𝓃𝑔 𝒷𝑒𝓉𝓈. 𝒫𝓁𝒶𝒸𝑒 𝓎𝑜𝓊𝓇 𝒸𝒽𝒾𝓅𝓈 𝑜𝓃 𝓇𝑒𝒹 𝑜𝓇 𝒷𝓁𝒶𝒸𝓀, 𝑜𝒹𝒹 𝑜𝓇 𝑒𝓋𝑒𝓃, 𝒶𝓃𝒹 𝓁𝑒𝓉 𝓉𝒽𝑒 𝓌𝒽𝑒𝑒𝓁 𝒹𝑒𝒸𝒾𝒹𝑒 𝓎𝑜𝓊𝓇 𝒻𝒶𝓉𝑒. 𝒯𝒽𝑒 𝓈𝑜𝓊𝓃𝒹 𝑜𝒻 𝓉𝒽𝑒 𝒷𝒶𝓁𝓁 𝒹𝒶𝓃𝒸𝒾𝓃𝑔 𝒶𝓇𝑜𝓊𝓃𝒹 𝓉𝒽𝑒 𝓃𝓊𝓂𝒷𝑒𝓇𝑒𝒹 𝓅𝑜𝒸𝓀𝑒𝓉𝓈 𝒶𝒹𝒹𝓈 𝓉𝑜 𝓉𝒽𝑒 𝓈𝓊𝓈𝓅𝑒𝓃𝓈𝑒, 𝒸𝓇𝑒𝒶𝓉𝒾𝓃𝑔 𝒶𝓃 𝒶𝓉𝓂𝑜𝓈𝓅𝒽𝑒𝓇𝑒 𝑜𝒻 𝓈𝓊𝓈𝓅𝑒𝓃𝓈𝑒 𝒶𝓃𝒹 𝑒𝓍𝒽𝒾𝓁𝒶𝓇𝒶𝓉𝒾𝑜𝓃.</p>
+        <div class="">
+            <p class="my03">03</p>
+            <div style="display: flex; align-items: center; justify-content: start; margin: -70px 0px 0px 40px;">
+                <img src="images/pexels-vitor-lopes-15121201.jpg" alt="" style="width: 550px; height: 550px; border-radius: 25px; margin-left: 30px;" >
+                <p style=" width: 800px; display: inline-block; vertical-align: 190px; margin-left: 60px; font-size: 30px;color: rgb(52, 52, 52)" > 𝒯𝒽𝑒 𝓇𝑜𝓊𝓁𝑒𝓉𝓉𝑒 𝓌𝒽𝑒𝑒𝓁, 𝒶 𝓈𝓎𝓂𝒷𝑜𝓁 𝑜𝒻 𝒸𝒽𝒶𝓃𝒸𝑒 𝒶𝓃𝒹 𝒻𝑜𝓇𝓉𝓊𝓃𝑒, 𝒶𝓌𝒶𝒾𝓉𝓈 𝓎𝑜𝓊𝓇 𝒹𝒶𝓇𝒾𝓃𝑔 𝒷𝑒𝓉𝓈. 𝒫𝓁𝒶𝒸𝑒 𝓎𝑜𝓊𝓇 𝒸𝒽𝒾𝓅𝓈 𝑜𝓃 𝓇𝑒𝒹 𝑜𝓇 𝒷𝓁𝒶𝒸𝓀, 𝑜𝒹𝒹 𝑜𝓇 𝑒𝓋𝑒𝓃, 𝒶𝓃𝒹 𝓁𝑒𝓉 𝓉𝒽𝑒 𝓌𝒽𝑒𝑒𝓁 𝒹𝑒𝒸𝒾𝒹𝑒 𝓎𝑜𝓊𝓇 𝒻𝒶𝓉𝑒. 𝒯𝒽𝑒 𝓈𝑜𝓊𝓃𝒹 𝑜𝒻 𝓉𝒽𝑒 𝒷𝒶𝓁𝓁 𝒹𝒶𝓃𝒸𝒾𝓃𝑔 𝒶𝓇𝑜𝓊𝓃𝒹 𝓉𝒽𝑒 𝓃𝓊𝓂𝒷𝑒𝓇𝑒𝒹 𝓅𝑜𝒸𝓀𝑒𝓉𝓈 𝒶𝒹𝒹𝓈 𝓉𝑜 𝓉𝒽𝑒 𝓈𝓊𝓈𝓅𝑒𝓃𝓈𝑒, 𝒸𝓇𝑒𝒶𝓉𝒾𝓃𝑔 𝒶𝓃 𝒶𝓉𝓂𝑜𝓈𝓅𝒽𝑒𝓇𝑒 𝑜𝒻 𝓈𝓊𝓈𝓅𝑒𝓃𝓈𝑒 𝒶𝓃𝒹 𝑒𝓍𝒽𝒾𝓁𝒶𝓇𝒶𝓉𝒾𝑜𝓃.</p>
+            </div> 
         </div> 
     </div>
 
@@ -675,10 +856,10 @@
         
         
             <div id="targetDiv" class="container2">
-                <div  class="box" style="margin-left: 20px;opacity: 0;animation-delay: 1s;display: inline-block;animation-name: faderight;animation-duration: 3s;animation-fill-mode: forwards;background-image: url('images/Greece.jpg');background-size: 600px 500px;background-repeat: no-repeat;background-attachment: fixed;"> </div>
-                <div  class="box" style="margin-left: 20px;opacity: 0;animation-delay: 2.5s;display: inline-block;animation-name: faderight;animation-duration: 3s;animation-fill-mode: forwards;background-image: url('images/pexels-mark-neal-2225442.jpg');background-size: 500px 500px;background-repeat: no-repeat;background-attachment: fixed;"></div>
-                <div  class="box" style="margin-left: 20px;opacity: 0;animation-delay: 4.5s;display: inline-block;animation-name: faderight;animation-duration: 3s;animation-fill-mode: forwards;background-image: url('images/om.jpg');background-size: 500px 500px;background-repeat: no-repeat;background-attachment: fixed;background-position: center;"></div>
-                <div  class="box" style="margin-left: 20px;opacity: 0;animation-delay: 6s;display: inline-block;animation-name: faderight;animation-duration: 3s;animation-fill-mode: forwards;background-image: url('images/France.jpg');background-size: 400px 480px;background-repeat: no-repeat;background-attachment: fixed;"></div>
+                <div  class="box" style="animation-iteration-count: infinite;margin-left: 20px;opacity: 0;animation-delay: 1s;display: inline-block;animation-name: faderight;animation-duration: 6s;animation-fill-mode: forwards;background-image: url('images/Greece.jpg');background-size: 600px 500px;background-repeat: no-repeat;background-attachment: fixed;"> </div>
+                <div  class="box" style="animation-iteration-count: infinite;margin-left: 20px;opacity: 0;animation-delay: 2.5s;display: inline-block;animation-name: faderight;animation-duration: 6s;animation-fill-mode: forwards;background-image: url('images/pexels-mark-neal-2225442.jpg');background-size: 500px 500px;background-repeat: no-repeat;background-attachment: fixed;"></div>
+                <div  class="box" style="animation-iteration-count: infinite;margin-left: 20px;opacity: 0;animation-delay: 4.5s;display: inline-block;animation-name: faderight;animation-duration: 6s;animation-fill-mode: forwards;background-image: url('images/om.jpg');background-size: 500px 500px;background-repeat: no-repeat;background-attachment: fixed;background-position: center;"></div>
+                <div  class="box" style="animation-iteration-count: infinite;margin-left: 20px;opacity: 0;animation-delay: 6s;display: inline-block;animation-name: faderight;animation-duration: 6s;animation-fill-mode: forwards;background-image: url('images/France.jpg');background-size: 400px 480px;background-repeat: no-repeat;background-attachment: fixed;"></div>
             </div>
 
         <div  style="display: flex; justify-content: space-around; ">
