@@ -255,13 +255,15 @@
             height: 470px;
             background-color: #cce5ff; 
             border-radius: 10px;
-            opacity: 0;
             animation-delay: 2.5s;
             display: inline-block;
             animation-name: faderight;
-            animation-duration: 5s;
+            animation-duration: 6s;
             animation-fill-mode: forwards;
             transition: all 0.3s ease;
+            animation-iteration-count: 2;
+            margin-left: 20px;
+            opacity: 0;
         }
 
 
@@ -662,31 +664,60 @@
                 margin-left: 20px;
                 font-size: 30px;color: rgb(52, 52, 52)
             }
+            
+            .second_exp div{
+                display: flex; 
+                align-items: center;
+                justify-content: end;
+                margin: 50px;
+            }
+            .second_exp img{
+                width: 600px;
+                height: 500px;
+                border-radius: 25px;
+            }
+            .second_exp p{
+                display: inline-block; 
+                vertical-align: 190px; 
+                margin: 0px 30px 0px 0px; 
+                font-size: 30px; 
+                margin-left: -30px;
+                color: rgb(52, 52, 52); 
+                text-align: center;
+            }
+
+            .third_exp div{
+                display: flex; 
+                align-items: center; 
+                justify-content: start; 
+                margin: -70px 0px 0px 40px;
+            }
+            .third_exp div p{
+                width: 800px; 
+                display: inline-block; 
+                vertical-align: 190px; 
+                margin-left: 60px;
+                font-size: 30px;
+                color: rgb(52, 52, 52);
+            }
+            .third_exp div img{
+                width: 550px; 
+                height: 550px; 
+                border-radius: 25px; 
+                margin-left: 30px;
+            }
+            .destination_title p{
+                font-weight:bolder;
+                color: rgb(0, 0, 0);
+                margin: 300px 0px 80px 0px;
+                font-size: 40px; text-align: center;
+                color: #2C3E50;
+                font-family:sans-serif; 
+                font-weight: 800;
+            }
+            
+
            
-            .first_exp i:nth-of-type(1){
-                font-size: 70px; 
-                margin: 50px 0px 0px 650px;  
-                rotate:39rad;
-                color: gray;
-            }
-            .first_exp i:nth-of-type(2){
-                font-size: 70px; 
-                margin: 90px 0px 0px 700px;  
-                rotate: 45rad;
-                color: gray
-            }
-            .first_exp i:nth-of-type(3){
-                font-size: 70px; 
-                margin: 85px 0px 0px 800px;  
-                rotate: 1rad;
-                color: gray
-            }
-            .first_exp i:nth-of-type(4){
-                font-size: 70px; 
-                margin: 90px 0px 0px 900px;  
-                rotate: 190rad;
-                color: gray
-            }
         </style>
 
     </head>
@@ -695,7 +726,7 @@
 
 
             <div class="container">
-                <div class="brand">Join <br> My Trip
+                <div class="brand">Join<br>My Trip
                     <i class="fa-solid fa-person-hiking move-icon"></i>
                 </div>  
                 
@@ -747,7 +778,7 @@
                 </div>
                 <p style="margin: -23px 0px 0px 150px;color: gray;width: 300px;">Trip to Greece in June with Rita</p>
             </div>
-            <div >
+            <div style="margin-left: 50px;">
                 <div style="margin: 0px 0px 0px 150px;"><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i></div>
                 <p style="width: 330px; text-align: center; margin: 20px 0px 0px 28px;font-size: 19px;">"I had the most amazing time on this trip! The itinerary was thoughtfully planned, allowing us to immerse ourselves in the local culture and traditions. The bustling markets, aromatic street food, and vibrant festivals created a tapestry of sights, sounds, and flavors. The knowledgeable guides provided fascinating insights into the history and significance of each place we visited. It was a truly enriching experience that left me with a deeper appreciation for the beauty and diversity of our world."</p>
                 <div style="display: flex;margin-left: 50px;margin-top: 20px;">
@@ -775,8 +806,6 @@
         <br><br><br> 
         <br><br><br>
         
-
-
             <div class="why_travel">
                 <button class="shadow__btn">Why travel with us?</button>
             </div>
@@ -807,6 +836,7 @@
             </div>
 
 
+
     <div class="trips">  
 
         <div class="first_exp">
@@ -817,64 +847,64 @@
         
         <br><br>
 
-        <div class="first_exp_i"> 
-            <i class="fa-solid fa-shoe-prints" ></i>
-            <i class="fa-solid fa-shoe-prints" ></i>
-            <i class="fa-solid fa-shoe-prints" ></i>
+        <div> 
+            <i class="fa-solid fa-shoe-prints" style="font-size: 70px; margin: 50px 0px 0px 650px;  rotate:39rad;color: gray"></i>
+            <i class="fa-solid fa-shoe-prints" style="font-size: 70px; margin: 90px 0px 0px 700px;  rotate: 45rad;color: gray"></i>
+            <i class="fa-solid fa-shoe-prints" style="font-size: 70px; margin: 85px 0px 0px 800px;  rotate: 1rad;color: gray"></i>
             <i class="fa-solid fa-shoe-prints" style="font-size: 70px; margin: 90px 0px 0px 900px;  rotate: 190rad;color: gray"></i>
         </div>
 
         <div class="second_exp">
             <p class="my02">02</p>
-            <div style="display: flex; align-items: center; justify-content: end; margin: 50px;">
-                    <p style="display: inline-block; vertical-align: 190px; margin: 0px 30px 0px 0px; font-size: 30px; margin-left: -30px;color: rgb(52, 52, 52); text-align: center;"> 𝒲𝒽𝑒𝓉𝒽𝑒𝓇 𝓎𝑜𝓊'𝓇𝑒 𝒶 𝓈𝑒𝒶𝓈𝑜𝓃𝑒𝒹 𝓇𝒾𝒹𝑒𝓇 𝑜𝓇 𝒶 𝒻𝒾𝓇𝓈𝓉-𝓉𝒾𝓂𝑒 𝒶𝒹𝓋𝑒𝓃𝓉𝓊𝓇𝑒𝓇, 𝑜𝓊𝓇 𝒿𝑒𝓉𝓈𝓀𝒾 𝓉𝑜𝓊𝓇𝓈 𝓅𝓇𝑜𝓂𝒾𝓈𝑒 𝒶𝓃 𝓊𝓃𝒻𝑜𝓇𝑔𝑒𝓉𝓉𝒶𝒷𝓁𝑒 𝑒𝓍𝓅𝑒𝓇𝒾𝑒𝓃𝒸𝑒. 𝒫𝒾𝒸𝓉𝓊𝓇𝑒 𝓎𝑜𝓊𝓇𝓈𝑒𝓁𝒻 𝑔𝓁𝒾𝒹𝒾𝓃𝑔 𝒶𝒸𝓇𝑜𝓈𝓈 𝒸𝓇𝓎𝓈𝓉𝒶𝓁-𝒸𝓁𝑒𝒶𝓇 𝓌𝒶𝓉𝑒𝓇𝓈, 𝒸𝒶𝓇𝓋𝒾𝓃𝑔 𝓉𝒽𝓇𝑜𝓊𝑔𝒽 𝓌𝒶𝓋𝑒𝓈, 𝒶𝓃𝒹 𝑒𝓃𝒿𝑜𝓎𝒾𝓃𝑔 𝓉𝒽𝑒 𝒻𝓇𝑒𝑒𝒹𝑜𝓂 𝑜𝒻 𝓉𝒽𝑒 𝑜𝓅𝑒𝓃 𝓈𝑒𝒶. 𝒪𝓊𝓇 𝑒𝓍𝓅𝑒𝓇𝓉 𝒾𝓃𝓈𝓉𝓇𝓊𝒸𝓉𝑜𝓇𝓈 𝓌𝒾𝓁𝓁 𝑔𝓊𝒾𝒹𝑒 𝓎𝑜𝓊 𝓉𝒽𝓇𝑜𝓊𝑔𝒽 𝓉𝒽𝑒 𝒷𝒶𝓈𝒾𝒸𝓈, 𝑒𝓃𝓈𝓊𝓇𝒾𝓃𝑔 𝒶 𝓈𝒶𝒻𝑒 𝒶𝓃𝒹 𝑒𝓍𝒽𝒾𝓁𝒶𝓇𝒶𝓉𝒾𝓃𝑔 𝓇𝒾𝒹𝑒 𝒻𝑜𝓇 𝓅𝒶𝓇𝓉𝒾𝒸𝒾𝓅𝒶𝓃𝓉𝓈 𝑜𝒻 𝒶𝓁𝓁 𝓈𝓀𝒾𝓁𝓁 𝓁𝑒𝓋𝑒𝓁𝓈.</p>
-                    <img src="images/jetski.jpg" alt="" style="width: 600px; height: 500px; border-radius: 25px;">
+            <div>
+                <p> 𝒲𝒽𝑒𝓉𝒽𝑒𝓇 𝓎𝑜𝓊'𝓇𝑒 𝒶 𝓈𝑒𝒶𝓈𝑜𝓃𝑒𝒹 𝓇𝒾𝒹𝑒𝓇 𝑜𝓇 𝒶 𝒻𝒾𝓇𝓈𝓉-𝓉𝒾𝓂𝑒 𝒶𝒹𝓋𝑒𝓃𝓉𝓊𝓇𝑒𝓇, 𝑜𝓊𝓇 𝒿𝑒𝓉𝓈𝓀𝒾 𝓉𝑜𝓊𝓇𝓈 𝓅𝓇𝑜𝓂𝒾𝓈𝑒 𝒶𝓃 𝓊𝓃𝒻𝑜𝓇𝑔𝑒𝓉𝓉𝒶𝒷𝓁𝑒 𝑒𝓍𝓅𝑒𝓇𝒾𝑒𝓃𝒸𝑒. 𝒫𝒾𝒸𝓉𝓊𝓇𝑒 𝓎𝑜𝓊𝓇𝓈𝑒𝓁𝒻 𝑔𝓁𝒾𝒹𝒾𝓃𝑔 𝒶𝒸𝓇𝑜𝓈𝓈 𝒸𝓇𝓎𝓈𝓉𝒶𝓁-𝒸𝓁𝑒𝒶𝓇 𝓌𝒶𝓉𝑒𝓇𝓈, 𝒸𝒶𝓇𝓋𝒾𝓃𝑔 𝓉𝒽𝓇𝑜𝓊𝑔𝒽 𝓌𝒶𝓋𝑒𝓈, 𝒶𝓃𝒹 𝑒𝓃𝒿𝑜𝓎𝒾𝓃𝑔 𝓉𝒽𝑒 𝒻𝓇𝑒𝑒𝒹𝑜𝓂 𝑜𝒻 𝓉𝒽𝑒 𝑜𝓅𝑒𝓃 𝓈𝑒𝒶. 𝒪𝓊𝓇 𝑒𝓍𝓅𝑒𝓇𝓉 𝒾𝓃𝓈𝓉𝓇𝓊𝒸𝓉𝑜𝓇𝓈 𝓌𝒾𝓁𝓁 𝑔𝓊𝒾𝒹𝑒 𝓎𝑜𝓊 𝓉𝒽𝓇𝑜𝓊𝑔𝒽 𝓉𝒽𝑒 𝒷𝒶𝓈𝒾𝒸𝓈, 𝑒𝓃𝓈𝓊𝓇𝒾𝓃𝑔 𝒶 𝓈𝒶𝒻𝑒 𝒶𝓃𝒹 𝑒𝓍𝒽𝒾𝓁𝒶𝓇𝒶𝓉𝒾𝓃𝑔 𝓇𝒾𝒹𝑒 𝒻𝑜𝓇 𝓅𝒶𝓇𝓉𝒾𝒸𝒾𝓅𝒶𝓃𝓉𝓈 𝑜𝒻 𝒶𝓁𝓁 𝓈𝓀𝒾𝓁𝓁 𝓁𝑒𝓋𝑒𝓁𝓈.</p>
+                <img src="images/jetski.jpg" alt="not found">
             </div>
         </div>
 
         <br><br><br>
-            <div>
-                <i class="fa-solid fa-shoe-prints" style="font-size: 70px; margin: 50px 0px 0px 650px;  rotate: 8rad; color: gray;"></i>
-                <i class="fa-solid fa-shoe-prints" style="font-size: 70px; margin: 90px 0px 0px 579px;  rotate: 15rad;color: gray"></i>
-                <i class="fa-solid fa-shoe-prints" style="font-size: 70px;  rotate: 21rad; position: relative;top: 130px;left: -195px;color: gray"></i>
-            </div>
+
+        <div>
+            <i class="fa-solid fa-shoe-prints" style="font-size: 70px; margin: 50px 0px 0px 650px;  rotate: 8rad; color: gray;"></i>
+            <i class="fa-solid fa-shoe-prints" style="font-size: 70px; margin: 90px 0px 0px 579px;  rotate: 15rad;color: gray"></i>
+            <i class="fa-solid fa-shoe-prints" style="font-size: 70px;  rotate: 21rad; position: relative;top: 130px;left: -195px;color: gray"></i>
+        </div>
+
         <br><br><br>
-        <div class="">
+        <div class="third_exp">
             <p class="my03">03</p>
-            <div style="display: flex; align-items: center; justify-content: start; margin: -70px 0px 0px 40px;">
-                <img src="images/pexels-vitor-lopes-15121201.jpg" alt="" style="width: 550px; height: 550px; border-radius: 25px; margin-left: 30px;" >
-                <p style=" width: 800px; display: inline-block; vertical-align: 190px; margin-left: 60px; font-size: 30px;color: rgb(52, 52, 52)" > 𝒯𝒽𝑒 𝓇𝑜𝓊𝓁𝑒𝓉𝓉𝑒 𝓌𝒽𝑒𝑒𝓁, 𝒶 𝓈𝓎𝓂𝒷𝑜𝓁 𝑜𝒻 𝒸𝒽𝒶𝓃𝒸𝑒 𝒶𝓃𝒹 𝒻𝑜𝓇𝓉𝓊𝓃𝑒, 𝒶𝓌𝒶𝒾𝓉𝓈 𝓎𝑜𝓊𝓇 𝒹𝒶𝓇𝒾𝓃𝑔 𝒷𝑒𝓉𝓈. 𝒫𝓁𝒶𝒸𝑒 𝓎𝑜𝓊𝓇 𝒸𝒽𝒾𝓅𝓈 𝑜𝓃 𝓇𝑒𝒹 𝑜𝓇 𝒷𝓁𝒶𝒸𝓀, 𝑜𝒹𝒹 𝑜𝓇 𝑒𝓋𝑒𝓃, 𝒶𝓃𝒹 𝓁𝑒𝓉 𝓉𝒽𝑒 𝓌𝒽𝑒𝑒𝓁 𝒹𝑒𝒸𝒾𝒹𝑒 𝓎𝑜𝓊𝓇 𝒻𝒶𝓉𝑒. 𝒯𝒽𝑒 𝓈𝑜𝓊𝓃𝒹 𝑜𝒻 𝓉𝒽𝑒 𝒷𝒶𝓁𝓁 𝒹𝒶𝓃𝒸𝒾𝓃𝑔 𝒶𝓇𝑜𝓊𝓃𝒹 𝓉𝒽𝑒 𝓃𝓊𝓂𝒷𝑒𝓇𝑒𝒹 𝓅𝑜𝒸𝓀𝑒𝓉𝓈 𝒶𝒹𝒹𝓈 𝓉𝑜 𝓉𝒽𝑒 𝓈𝓊𝓈𝓅𝑒𝓃𝓈𝑒, 𝒸𝓇𝑒𝒶𝓉𝒾𝓃𝑔 𝒶𝓃 𝒶𝓉𝓂𝑜𝓈𝓅𝒽𝑒𝓇𝑒 𝑜𝒻 𝓈𝓊𝓈𝓅𝑒𝓃𝓈𝑒 𝒶𝓃𝒹 𝑒𝓍𝒽𝒾𝓁𝒶𝓇𝒶𝓉𝒾𝑜𝓃.</p>
+            <div>
+                <img src="images/pexels-vitor-lopes-15121201.jpg">
+                <p> 𝒯𝒽𝑒 𝓇𝑜𝓊𝓁𝑒𝓉𝓉𝑒 𝓌𝒽𝑒𝑒𝓁, 𝒶 𝓈𝓎𝓂𝒷𝑜𝓁 𝑜𝒻 𝒸𝒽𝒶𝓃𝒸𝑒 𝒶𝓃𝒹 𝒻𝑜𝓇𝓉𝓊𝓃𝑒, 𝒶𝓌𝒶𝒾𝓉𝓈 𝓎𝑜𝓊𝓇 𝒹𝒶𝓇𝒾𝓃𝑔 𝒷𝑒𝓉𝓈. 𝒫𝓁𝒶𝒸𝑒 𝓎𝑜𝓊𝓇 𝒸𝒽𝒾𝓅𝓈 𝑜𝓃 𝓇𝑒𝒹 𝑜𝓇 𝒷𝓁𝒶𝒸𝓀, 𝑜𝒹𝒹 𝑜𝓇 𝑒𝓋𝑒𝓃, 𝒶𝓃𝒹 𝓁𝑒𝓉 𝓉𝒽𝑒 𝓌𝒽𝑒𝑒𝓁 𝒹𝑒𝒸𝒾𝒹𝑒 𝓎𝑜𝓊𝓇 𝒻𝒶𝓉𝑒. 𝒯𝒽𝑒 𝓈𝑜𝓊𝓃𝒹 𝑜𝒻 𝓉𝒽𝑒 𝒷𝒶𝓁𝓁 𝒹𝒶𝓃𝒸𝒾𝓃𝑔 𝒶𝓇𝑜𝓊𝓃𝒹 𝓉𝒽𝑒 𝓃𝓊𝓂𝒷𝑒𝓇𝑒𝒹 𝓅𝑜𝒸𝓀𝑒𝓉𝓈 𝒶𝒹𝒹𝓈 𝓉𝑜 𝓉𝒽𝑒 𝓈𝓊𝓈𝓅𝑒𝓃𝓈𝑒, 𝒸𝓇𝑒𝒶𝓉𝒾𝓃𝑔 𝒶𝓃 𝒶𝓉𝓂𝑜𝓈𝓅𝒽𝑒𝓇𝑒 𝑜𝒻 𝓈𝓊𝓈𝓅𝑒𝓃𝓈𝑒 𝒶𝓃𝒹 𝑒𝓍𝒽𝒾𝓁𝒶𝓇𝒶𝓉𝒾𝑜𝓃.</p>
             </div> 
         </div> 
     </div>
-
+</div>
 
 <div>
-    <p style="font-weight:bolder; color: rgb(0, 0, 0);margin: 300px 0px 80px 0px;font-size: 40px; text-align: center;color: #2C3E50;font-family:sans-serif; font-weight: 800;">Popular destinations</p>
+    <div class="destination_title">
+        <p>Popular destinations</p>
     <div>
+    
+    <div id="targetDiv" class="container2">
+        <div  class="box" style="animation-delay: 1s;background-image: url('images/Greece.jpg');background-size: 600px 500px;background-repeat: no-repeat;background-attachment: fixed;"> </div>
+        <div  class="box" style="animation-delay: 2.5s;background-image: url('images/pexels-mark-neal-2225442.jpg');background-size: 500px 500px;background-repeat: no-repeat;background-attachment: fixed;"></div>
+        <div  class="box" style="animation-delay: 4.5s;background-image: url('images/om.jpg');background-size: 500px 500px;background-repeat: no-repeat;background-attachment: fixed;background-position: center;"></div>
+        <div  class="box" style="animation-delay: 6s;background-image: url('images/France.jpg');background-size: 400px 480px;background-repeat: no-repeat;background-attachment: fixed;"></div>
+    </div>
 
-        
-        
-            <div id="targetDiv" class="container2">
-                <div  class="box" style="animation-iteration-count: infinite;margin-left: 20px;opacity: 0;animation-delay: 1s;display: inline-block;animation-name: faderight;animation-duration: 6s;animation-fill-mode: forwards;background-image: url('images/Greece.jpg');background-size: 600px 500px;background-repeat: no-repeat;background-attachment: fixed;"> </div>
-                <div  class="box" style="animation-iteration-count: infinite;margin-left: 20px;opacity: 0;animation-delay: 2.5s;display: inline-block;animation-name: faderight;animation-duration: 6s;animation-fill-mode: forwards;background-image: url('images/pexels-mark-neal-2225442.jpg');background-size: 500px 500px;background-repeat: no-repeat;background-attachment: fixed;"></div>
-                <div  class="box" style="animation-iteration-count: infinite;margin-left: 20px;opacity: 0;animation-delay: 4.5s;display: inline-block;animation-name: faderight;animation-duration: 6s;animation-fill-mode: forwards;background-image: url('images/om.jpg');background-size: 500px 500px;background-repeat: no-repeat;background-attachment: fixed;background-position: center;"></div>
-                <div  class="box" style="animation-iteration-count: infinite;margin-left: 20px;opacity: 0;animation-delay: 6s;display: inline-block;animation-name: faderight;animation-duration: 6s;animation-fill-mode: forwards;background-image: url('images/France.jpg');background-size: 400px 480px;background-repeat: no-repeat;background-attachment: fixed;"></div>
-            </div>
-
-        <div  style="display: flex; justify-content: space-around; ">
-            <div class="containerX">
-                <div class="buttonI"><a href="#">GREECE</a></div>
-            </div>
-            <div class="containerX">
-                <div class="buttonI"><a href="#">ITALY</a></div>
-            </div>
-            <div class="containerX">
-                <div class="buttonI"><a href="#">MAROC</a></div>
-            </div>
-            <div class="containerX">
-                <div class="buttonI"><a href="#">FRANCE</a></div>
-            </div>
+    <div  style="display: flex; justify-content: space-around; ">
+        <div class="containerX">
+            <div class="buttonI"><a href="#">GREECE</a></div>
+        </div>
+        <div class="containerX">
+            <div class="buttonI"><a href="#">ITALY</a></div>
+        </div>
+        <div class="containerX">
+            <div class="buttonI"><a href="#">MAROC</a></div>
+        </div>
+        <div class="containerX">
+            <div class="buttonI"><a href="#">FRANCE</a></div>
         </div>
     </div>
 </div>
