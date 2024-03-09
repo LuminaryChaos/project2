@@ -85,8 +85,8 @@ html{
 
 
 .move-icon {
-position: relative;
-animation: moveAndBack 2s infinite alternate;
+    position: relative;
+    animation: moveAndBack 2s infinite alternate;
 }
 
 @keyframes moveAndBack {

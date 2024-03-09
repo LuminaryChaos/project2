@@ -244,6 +244,21 @@
             line-height: 1.5;
         }
 
+        
+        .move-icon {
+            position: relative;
+            animation: moveAndBack 2s infinite alternate;
+        }
+
+        @keyframes moveAndBack {
+            0% {
+                left: 0;
+            }
+            100% {
+                left: calc(80% ); 
+            }
+        }
+
 
 
 

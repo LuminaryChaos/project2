@@ -343,6 +343,22 @@
                 scroll-behavior: smooth;
             }
 
+            .move-icon {
+              position: relative;
+              animation: moveAndBack 2s infinite alternate;
+            }
+
+            @keyframes moveAndBack {
+                0% {
+                    left: 0;
+                }
+                100% {
+                    left: calc(80% ); 
+                }
+            }
+
+
+
             @media screen and (max-width : 600px) and (min-width : 300px){
                   .nav-list{
                       display: flex;
