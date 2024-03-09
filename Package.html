@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Packages</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+        <style>
+            body{
+                height: 10000px;
+                margin-left: 20px;
+                margin-left: 0px;
+                margin-top: 0px;
+                zoom: 90%;
+            }
+
+            .cont-navbar{
+                width: 110vw;
+            }
+
+            .container {
+                display: flex;
+                justify-content: space-between;
+                align-items: start;
+                background: linear-gradient(rgba(20, 20, 31, .7), rgba(20, 20, 31, .7)) ,url('images/main-bg.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                padding: 20px;
+                height: 700px;
+
+            }
+
+            .brand {
+                font-size: 30px;
+                color: white;
+            }
+
+            .nav-list {
+                display: flex;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                font-size: 20px;
+            }
+
+            .button_barre {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 49px;
+                width: 110px;
+                margin-left: 80px;
+                color: rgb(237, 230, 230);
+                margin-top: 15px;
+                border-radius: 40px;
+                text-decoration: none;
+                transition: color 0.3s ease-in-out;
+            }    
+
+            .nav-list li a::after {
+              content: '';
+              display: block;
+              width: 0;
+              height: 2px;
+              background-color:#86B817;
+              position: absolute;
+              bottom: -20px;
+              left: 50%;
+              transition: width 0.5s ease-out, left 0.5s ease-out;
+            }
+
+            html{
+                scroll-behavior: smooth;
+            }
+
+            
+            .nav-list a:hover {
+                color: #86B817;
+                transition: color 1s ease-out;
+            }
+
+
+            .travel-guide{
+                font-size: 15px;
+                font-weight: bold;
+                color: #86B817;
+                text-transform: uppercase;
+            }
+        
+            div .travel-guide{
+                display: flex;
+                justify-content: center;
+            }
+
+            h1.our-guide {
+                margin: 30px 0px 0px 20px;
+                text-align: center;
+                font-family: "Nunito", sans-serif;
+                font-weight: 800;
+                line-height: 1.2;
+                color: #2C3E50;
+            }
+ 
+
+            
+
+    .global{
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .First_trip{
+        margin-top: 50px;
+        width: 350px;
+        box-shadow: 0 0 10px rgba(116, 116, 116, 0.503);
+        height: 530px; 
+    }
+
+    .INF:first-child + small  {
+        border-left: 1px solid  gray;
+        text-align: center;
+        width: 90px;
+    }
+    .INF:first-child + small + small {
+        border-left: 1px solid gray;
+        text-align: center;
+        width: 90px;
+    }
+    .INF i{
+        color: #86B817;
+        font-size: 20px;
+        text-align: center;
+        margin-right: 10px;
+    }
+
+    .INF label{
+        color: gray;
+        margin-top: 10px;
+        font-size: 16px;
+    }
+
+    .informations{
+        border-bottom: 1px solid gray;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 350px;
+        margin-top: 20px;
+        height: 30px;
+    }
+
+    .div_of_img{
+        width: 350px;
+        overflow: hidden;
+    }
+
+    .img1{
+        width: 350px;
+        max-width: 100%;
+        height: auto;
+        transform: scale(1,1);
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .img1:hover{
+        transform: scale(1.1,1.1);
+    }
+
+    .details{
+        text-align: center;
+        width: 350px;
+        
+    }
+
+    .details .price{
+        font-size: calc(1.3rem + .6vw);
+        color: #2C3E50;
+    }
+
+    .details .rating small{
+        color: #86B817;
+        font-weight: 900;
+
+    }
+
+    .End_button1, .End_button2{
+        background-color: #86B817;
+        text-decoration: none;
+        color: white;
+        height: 45px;
+        width: 140px;
+        text-align: center;
+    }
+
+    .End_button2:hover, 
+    .End_button1:hover{
+        background-color: #97d01c;
+    }
+
+    .End_button2{
+        border-left: 1px solid white;     
+    }
+
+    .div_btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 350px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            margin-top: 200px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-section {
+            flex: 1;
+            padding: 0 20px;
+        }
+
+        .footer-section h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .footer-section p {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+
+
+
+
+
+
+
+
+
+        </style>
+    </head>
+    <body>
+
+        <div class="cont-navbar">
+
+            <div class="container">
+                
+              <div class="brand">Join <br> My Trip
+              <i class="fa-solid fa-person-hiking move-icon"></i>
+              </div>
+              
+              <ul class="nav-list" >
+                  <li><a href="#targetDiv" class="button_barre"><b>Top trips</b> <i class="fa-solid fa-images" style="margin:0px 0px 2px 5px;"></i></a></li>
+                  <li><a href="inscription.html" class="button_barre"><b>Inscription</b> <i class="fa-solid fa-scroll" style="margin:0px 0px 5px 5px;"></i></a></li>
+                  <li><a href="Guide.html" class="button_barre"><b>Guide</b> <i style="margin: 0px 0px 4px 3px;" class="fa-solid fa-user-group"></i></a></li>
+                  <li><a href="Package.html" class="button_barre"><b>Packages</b>  </a></li>
+                  <li><a href="#targetDiv2" class="button_barre"><b>Details</b><i class="fa-solid fa-circle-info" style="margin:0px 0px 0px 5px;"></i></a></li>
+              </ul>
+        
+          </div>
+            <div style="margin-top: -620px;display:  flex; justify-content: center; align-items: center; height: 600px; color: rgb(224, 223, 223); font-size: 75px;">
+              <p style="font-weight: 800;font-family: Nunito,sans-serif;">Packages</p>
+            </div>
+        
+          </div>
+        
+            <br><br><br><br><br>
+         
+        
+            <div>
+                <h2 class="travel-guide">________ Packages ________</h2>
+            </div>
+            <h1 class="our-guide">Awesome Packages</h1>
+
+
+            <div class="global">
+
+                <div class="First_trip">
+                    <div class="info_cont">
+                        <div class="div_of_img">
+                            <img class="img1" src="images/IMG-1.jpg" alt="Not found">
+                        </div>
+                        <div class="informations">
+                            <small class="INF"><i class="fa fa-map-marker-alt text-primary me-2"></i><label>Thailand</label></small>
+                            <small class="INF"><i class="fa fa-calendar-alt text-primary me-2"></i><label>3 days</label></small>
+                            <small class="INF"><i class="fa fa-user text-primary me-2"></i><label>2 Person</label></small>
+                        </div>
+                        <div class="details">
+                            <h3 class="price">$149.00</h3>
+                            <div class="rating">
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                            </div>
+                            <p>"Embark on an unforgettable journey filled with culinary specifically for you."</p>
+                            <div class="div_btn">
+                                <a href="#" class="End_button1"  style="border-radius: 30px 0 0 30px;"><p>Read More</p></a>
+                                <a href="#" class="End_button2" style="border-radius: 0 30px 30px 0;"><p>Book Now</p></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="First_trip">
+                    <div class="info_cont">
+                        <div class="div_of_img">
+                            <img class="img1" src="images/IMG-2.jpg" alt="Not found">
+                        </div>
+                        <div class="informations">
+                            <small class="INF"><i class="fa fa-map-marker-alt text-primary me-2"></i><label>Indonesia</label></small>
+                            <small class="INF"><i class="fa fa-calendar-alt text-primary me-2"></i><label>3 days</label></small>
+                            <small class="INF"><i class="fa fa-user text-primary me-2"></i><label>4 Person</label></small>
+                        </div>
+                        <div class="details">
+                            <h3 class="price">$139.00</h3>
+                            <div class="rating">
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                            </div>
+                            <p>"Indulge in a personalized satisfies your wanderlust and culinary cravings."</p>
+                            <div class="div_btn">
+                                <a href="#" class="End_button1"  style="border-radius: 30px 0 0 30px;"><p>Read More</p></a>
+                                <a href="#" class="End_button2" style="border-radius: 0 30px 30px 0;"><p>Book Now</p></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="First_trip">
+                    <div class="info_cont">
+                        <div class="div_of_img">
+                            <img class="img1" src="images/IMG-1.jpg" alt="Not found">
+                        </div>
+                        <div class="informations">
+                            <small class="INF"><i class="fa fa-map-marker-alt text-primary me-2"></i><label>Malaysia</label></small>
+                            <small class="INF"><i class="fa fa-calendar-alt text-primary me-2"></i><label>5 days</label></small>
+                            <small class="INF"><i class="fa fa-user text-primary me-2"></i><label>4 Person</label></small>
+                        </div>
+                        <div class="details">
+                            <h3 class="price">$169.00</h3>
+                            <div class="rating">
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                            </div>
+                            <p>"Experience and breathtaking destinations into a single remarkable trip."</p>
+                            <div class="div_btn">
+                                <a href="#" class="End_button1"  style="border-radius: 30px 0 0 30px;"><p>Read More</p></a>
+                                <a href="#" class="End_button2" style="border-radius: 0 30px 30px 0;"><p>Book Now</p></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+
+
+
+                
+    
+<footer id="targetDiv2">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h2>About Us</h2>
+            <p>We always make sure that you will have an extremly great and unforgettable trip in your whole life.</p>
+        </div>
+        <div class="footer-section">
+            <h2>Contact</h2>
+            <p>Email: info@yourtrips.com</p>
+            <p>Phone: +1 (123) 456-7890</p>
+        </div>
+        <div class="footer-section">
+            <h2>Follow Us</h2>
+            <p>Stay connected on social media:</p>
+            <p>Facebook : Tripmakers</p>
+            <p>Youtube : GoldenTrips </p>
+            <p>Instagram : Tripmakers V-I-P</p>
+        </div>
+    </div>
+  </footer>
+  
+
+
+
+    </body>
+</html>
