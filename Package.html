@@ -115,7 +115,7 @@
 
     .First_trip{
         margin-top: 50px;
-        width: 350px;
+        width: 390px;
         box-shadow: 0 0 10px rgba(116, 116, 116, 0.503);
         height: 530px; 
     }
@@ -148,18 +148,18 @@
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-        width: 350px;
+        width: 390px;
         margin-top: 20px;
         height: 30px;
     }
 
     .div_of_img{
-        width: 350px;
+        width: 390px;
         overflow: hidden;
     }
 
     .img1{
-        width: 350px;
+        width: 390px;
         max-width: 100%;
         height: auto;
         transform: scale(1,1);
@@ -172,7 +172,7 @@
 
     .details{
         text-align: center;
-        width: 350px;
+        width: 390px;
         
     }
 
@@ -209,20 +209,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 350px;
+        width: 390px;
     }
 
-
-
-
-
-
-
-
-
-
-
-
+    
         footer {
             background-color: #333;
             color: #fff;
@@ -257,7 +247,40 @@
 
 
 
+@media screen and (max-width : 600px) and (min-width : 300px){
+    .nav-list{
+        display: flex;
+        margin-top: -270px;
+        margin-left: -100px;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .nav-list li:nth-child(2){
+        display: none;
 
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        justify-content: space-around;
+        width: auto;
+        align-items: center;
+       margin: -50px 0px 0px 0px;
+    }
+    .title1{
+        margin-top: 500px;
+    }
+    .brand{
+        margin-top: -60px;
+    }
+    .footer-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+}
 
 
 
@@ -282,10 +305,9 @@
                   <li><a href="Package.html" class="button_barre"><b>Packages</b>  </a></li>
                   <li><a href="#targetDiv2" class="button_barre"><b>Details</b><i class="fa-solid fa-circle-info" style="margin:0px 0px 0px 5px;"></i></a></li>
               </ul>
-        
           </div>
-            <div style="margin-top: -620px;display:  flex; justify-content: center; align-items: center; height: 600px; color: rgb(224, 223, 223); font-size: 75px;">
-              <p style="font-weight: 800;font-family: Nunito,sans-serif;">Packages</p>
+            <div  style="margin-top: -620px;display:  flex; justify-content: center; align-items: center; height: 600px; color: rgb(224, 223, 223); font-size: 75px;">
+              <p class="title1" style="font-weight: 800;font-family: Nunito,sans-serif;">Packages</p>
             </div>
         
           </div>
@@ -362,7 +384,7 @@
                 <div class="First_trip">
                     <div class="info_cont">
                         <div class="div_of_img">
-                            <img class="img1" src="images/IMG-1.jpg" alt="Not found">
+                            <img class="img1" src="images/IMG-3.jpg" alt="Not found">
                         </div>
                         <div class="informations">
                             <small class="INF"><i class="fa fa-map-marker-alt text-primary me-2"></i><label>Malaysia</label></small>
@@ -388,32 +410,28 @@
                 </div>
                 
 
-
-
-
                 
-    
-<footer id="targetDiv2">
-    <div class="footer-content">
-        <div class="footer-section">
-            <h2>About Us</h2>
-            <p>We always make sure that you will have an extremly great and unforgettable trip in your whole life.</p>
-        </div>
-        <div class="footer-section">
-            <h2>Contact</h2>
-            <p>Email: info@yourtrips.com</p>
-            <p>Phone: +1 (123) 456-7890</p>
-        </div>
-        <div class="footer-section">
-            <h2>Follow Us</h2>
-            <p>Stay connected on social media:</p>
-            <p>Facebook : Tripmakers</p>
-            <p>Youtube : GoldenTrips </p>
-            <p>Instagram : Tripmakers V-I-P</p>
-        </div>
-    </div>
-  </footer>
-  
+            <footer id="targetDiv2">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h2>About Us</h2>
+                        <p>We always make sure that you will have an extremly great and unforgettable trip in your whole life.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h2>Contact</h2>
+                        <p>Email: info@yourtrips.com</p>
+                        <p>Phone: +1 (123) 456-7890</p>
+                    </div>
+                    <div class="footer-section">
+                        <h2>Follow Us</h2>
+                        <p>Stay connected on social media:</p>
+                        <p>Facebook : Tripmakers</p>
+                        <p>Youtube : GoldenTrips </p>
+                        <p>Instagram : Tripmakers V-I-P</p>
+                    </div>
+                </div>
+            </footer>
+            
 
 
 
