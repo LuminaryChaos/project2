@@ -154,6 +154,13 @@
                     opacity: 0;
                 }
             }
+
+            @media screen and (max-width:600px) {
+                .form{
+                    width: 50vw;
+                    margin-left: 70px;
+                }
+            }
         </style>
     </head>
 
@@ -191,6 +198,19 @@
             <button class="submit">Submit</button>
             <p class="signin">Already have an acount ? <a href="#">Signin</a> </p>
         </form>
-        
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var submitButton = document.querySelector('.submit');
+                submitButton.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    var inputs = document.querySelectorAll('.input');
+                    var values = [];
+                    inputs.forEach(function(input) {
+                    values.push(input.value);
+                    });
+                    console.log(values);
+                });
+                });
+        </script>
     </body>
 </html>
