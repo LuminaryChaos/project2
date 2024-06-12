@@ -6,11 +6,11 @@
         <title>Document</title>
 
         <style>
-            body{
+            body {
                 height: 600px; 
-                    background-color: #0093E9;
-                    background-image: linear-gradient(160deg, #0093E9 0%, #000000 77%, #000000 100%);   
-                }
+                background-color: #0093E9;
+                background-image: linear-gradient(160deg, #0093E9 0%, #000000 77%, #000000 100%);   
+            }
 
             .form {
                 display: flex;
@@ -99,7 +99,7 @@
                 border-radius: 10px;
             }
 
-                .form label .input + span {
+            .form label .input + span {
                 color: rgba(255, 255, 255, 0.5);
                 position: absolute;
                 left: 10px;
@@ -107,16 +107,16 @@
                 font-size: 0.9em;
                 cursor: text;
                 transition: 0.3s ease;
-                }
+            }
 
-            .form label  {
+            .form label {
                 top: 12.5px;
                 font-size: 0.9em;
                 margin-top: 10px;
             }
 
-            .form label ,
-            .form label  {
+            .form label,
+            .form label {
                 color: #00bfff;
                 top: 0px;
                 font-size: 0.7em;
@@ -156,61 +156,81 @@
             }
 
             @media screen and (max-width:600px) {
-                .form{
+                .form {
                     width: 50vw;
                     margin-left: 70px;
                 }
+            }
+
+            .error-message {
+                color: red;
+                font-size: 14px;
+                margin-top: 5px;
+                display: none;
+            }
+
+            .success-message {
+                color: green;
+                font-size: 14px;
+                margin-top: 5px;
+                display: none;
             }
         </style>
     </head>
 
     <body>
-        <form class="form">
-            <p class="title">Register </p>
-            <p class="message">Signup now and get full access to our app. </p>
-                <div class="flex">
+        <form class="form" id="registerForm">
+            <p class="title">Register</p>
+            <p class="message">Signup now and get full access to our app.</p>
+            <div class="flex">
                 <label>
-                    <input class="input" type="text" placeholder="Firstname">
+                    <input class="input" type="text" id="firstname" placeholder="Firstname">
                 </label>
-
-                <br>
-
                 <label style="margin-left: 15px;">
-                    <input class="input" type="text" placeholder="Lastname" >
+                    <input class="input" type="text" id="lastname" placeholder="Lastname">
                 </label>
             </div>  
-                    
             <label>
-                <input class="input" type="email" placeholder="Email">
+                <input class="input" type="email" id="email" placeholder="Email">
             </label> 
-
-                
             <label>
-                <input class="input" type="password" placeholder="Password">
+                <input class="input" type="password" id="password" placeholder="Password">
             </label>
-
             <label>
-                <input class="input" type="password" placeholder="Confirm password">
+                <input class="input" type="password" id="confirmPassword" placeholder="Confirm password">
             </label>
-
-            <br>
-
             <button class="submit">Submit</button>
-            <p class="signin">Already have an acount ? <a href="#">Signin</a> </p>
+            <p class="signin">Already have an account? <a href="#">Signin</a></p>
+            <p class="error-message" id="errorMessage">Please fill out all fields correctly.</p>
+            <p class="success-message" id="successMessage">Registration successful!</p>
         </form>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                var submitButton = document.querySelector('.submit');
-                submitButton.addEventListener('click', function(event) {
-                    event.preventDefault();
-                    var inputs = document.querySelectorAll('.input');
-                    var values = [];
-                    inputs.forEach(function(input) {
-                    values.push(input.value);
-                    });
-                    console.log(values);
-                });
-                });
-        </script>
+        
     </body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var submitButton = document.querySelector('.submit');
+            submitButton.addEventListener('click', function(event) {
+                event.preventDefault();
+                
+                var firstname = document.getElementById('firstname').value;
+                var lastname = document.getElementById('lastname').value;
+                var email = document.getElementById('email').value;
+                var password = document.getElementById('password').value;
+                var confirmPassword = document.getElementById('confirmPassword').value;
+
+                var errorMessage = document.getElementById('errorMessage');
+                var successMessage = document.getElementById('successMessage');
+                
+                if (firstname && lastname && email && password && confirmPassword && password === confirmPassword) {
+                    errorMessage.style.display = 'none';
+                    successMessage.style.display = 'block';
+                    var values = [firstname, lastname, email, password, confirmPassword];
+                    console.log(values);
+                } else {
+                    successMessage.style.display = 'none';
+                    errorMessage.style.display = 'block';
+                }
+            });
+        });
+    </script>
 </html>

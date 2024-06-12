@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Packages</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+        <style>
+            body{
+                height: 10000px;
+                margin-left: 20px;
+                margin-left: 0px;
+                margin-top: 0px;
+                zoom: 90%;
+            }
+
+            .cont-navbar{
+                width: 110vw;
+            }
+
+            .container {
+                display: flex;
+                justify-content: space-between;
+                align-items: start;
+                background: linear-gradient(rgba(20, 20, 31, .7), rgba(20, 20, 31, .7)) ,url('images/main-bg.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                padding: 20px;
+                height: 700px;
+
+            }
+
+            .brand {
+                font-size: 30px;
+                color: white;
+            }
+
+            .nav-list {
+                display: flex;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                font-size: 20px;
+            }
+
+            .button_barre {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 49px;
+                width: 110px;
+                margin-left: 80px;
+                color: rgb(237, 230, 230);
+                margin-top: 15px;
+                border-radius: 40px;
+                text-decoration: none;
+                transition: color 0.3s ease-in-out;
+            }    
+
+            .nav-list li a::after {
+              content: '';
+              display: block;
+              width: 0;
+              height: 2px;
+              background-color:#86B817;
+              position: absolute;
+              bottom: -20px;
+              left: 50%;
+              transition: width 0.5s ease-out, left 0.5s ease-out;
+            }
+
+            html{
+                scroll-behavior: smooth;
+            }
+
+            
+            .nav-list a:hover {
+                color: #86B817;
+                transition: color 1s ease-out;
+            }
+
+
+            .travel-guide{
+                font-size: 15px;
+                font-weight: bold;
+                color: #86B817;
+                text-transform: uppercase;
+            }
+        
+            div .travel-guide{
+                display: flex;
+                justify-content: center;
+            }
+
+            h1.our-guide {
+                margin: 30px 0px 0px 20px;
+                text-align: center;
+                font-family: "Nunito", sans-serif;
+                font-weight: 800;
+                line-height: 1.2;
+                color: #2C3E50;
+            }
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </style>
+    </head>
+    <body>
+
+        <div class="cont-navbar">
+
+            <div class="container">
+                
+              <div class="brand">Join <br> My Trip
+              <i class="fa-solid fa-person-hiking move-icon"></i>
+              </div>
+              
+              <ul class="nav-list" >
+                  <li><a href="#targetDiv" class="button_barre"><b>Top trips</b> <i class="fa-solid fa-images" style="margin:0px 0px 2px 5px;"></i></a></li>
+                  <li><a href="inscription.html" class="button_barre"><b>Inscription</b> <i class="fa-solid fa-scroll" style="margin:0px 0px 5px 5px;"></i></a></li>
+                  <li><a href="Guide.html" class="button_barre"><b>Guide</b> <i style="margin: 0px 0px 4px 3px;" class="fa-solid fa-user-group"></i></a></li>
+                  <li><a href="Package.html" class="button_barre"><b>Packages</b>  </a></li>
+                  <li><a href="#targetDiv2" class="button_barre"><b>Details</b><i class="fa-solid fa-circle-info" style="margin:0px 0px 0px 5px;"></i></a></li>
+              </ul>
+        
+          </div>
+            <div style="margin-top: -620px;display:  flex; justify-content: center; align-items: center; height: 600px; color: rgb(224, 223, 223); font-size: 75px;">
+              <p style="font-weight: 800;font-family: Nunito,sans-serif;">Packages</p>
+            </div>
+        
+          </div>
+        
+            <br><br><br><br><br>
+         
+        
+            <div>
+                <h2 class="travel-guide">________ Packages ________</h2>
+            </div>
+            <h1 class="our-guide">Awesome Packages</h1>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="global">
+                <div class="First_trip">
+                    <div class="info_cont">
+                        <div>
+                            <img class="img1" src="img/package-1.jpg" alt="">
+                        </div>
+                        <div class="d-flex border-bottom">
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-map-marker-alt text-primary me-2"></i>Thailand</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt text-primary me-2"></i>3 days</small>
+                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>2 Person</small>
+                        </div>
+                        <div class="text-center p-4">
+                            <h3 class="mb-0">$149.00</h3>
+                            <div class="mb-3">
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                            </div>
+                            <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam eos</p>
+                            <div class="d-flex justify-content-center mb-2">
+                                <a href="#" class="btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
+                                <a href="#" class="btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </body>
+</html>
