@@ -52,7 +52,7 @@
   </div>
         <script>
             document.addEventListener('DOMContentLoaded', function() {
-                // Load customer data from localStorage and populate the table
+
                 var customers = JSON.parse(localStorage.getItem('customers')) || [];
                 var customerList = document.getElementById('customerList');
 
@@ -69,7 +69,7 @@
                 var saveButton = document.getElementById('saveCustomer');
                 var deleteButton = document.getElementById('deleteCustomer');
 
-                // Function to add a customer row to the table
+
                 function addCustomerToTable(firstName, lastName, email) {
                     var row = document.createElement('tr');
                     row.innerHTML = '<td>' + firstName + '</td>' +
@@ -79,55 +79,50 @@
                     customerList.appendChild(row);
                 }
 
-                // Function to fill the edit form with customer details
+
                 function fillEditForm(firstName, lastName, email) {
                     editFirstName.value = firstName;
                     editLastName.value = lastName;
                     editEmail.value = email;
 
-                    // Add event listener to the edit form submission
+
                     saveButton.addEventListener('click', function(event) {
                         event.preventDefault();
-                        // Get the index of the customer in the customers array
+
                         var index = customers.findIndex(function(cust) {
                             return cust.email === email;
                         });
-                        // Update customer details
+
                         customers[index].firstname = editFirstName.value;
                         customers[index].lastname = editLastName.value;
                         customers[index].email = editEmail.value;
 
-                        // Update localStorage
+
                         localStorage.setItem('customers', JSON.stringify(customers));
 
-                        // Close the modal
                         editModal.style.display = 'none';
 
-                        // Refresh the page
                         location.reload();
                     });
 
-                    // Add event listener to the delete button
                     deleteButton.addEventListener('click', function() {
-                        // Get the index of the customer in the customers array
+      
                         var index = customers.findIndex(function(cust) {
                             return cust.email === email;
                         });
-                        // Remove the customer from the array
+
                         customers.splice(index, 1);
 
-                        // Update localStorage
                         localStorage.setItem('customers', JSON.stringify(customers));
 
-                        // Close the modal
+                        
                         editModal.style.display = 'none';
 
-                        // Refresh the page
+                     
                         location.reload();
                     });
                 }
 
-                // Add event listener to each "Edit" button
                 customerList.addEventListener('click', function(event) {
                     if (event.target && event.target.tagName === 'BUTTON' && event.target.classList.contains('edit')) {
                         var row = event.target.parentNode.parentNode;
@@ -136,10 +131,9 @@
                         var lastName = cells[1].textContent;
                         var email = cells[2].textContent;
 
-                        // Fill the edit form with customer details
+
                         fillEditForm(firstName, lastName, email);
 
-                        // Show the edit modal
                         editModal.style.display = 'block';
                     }
                 });
