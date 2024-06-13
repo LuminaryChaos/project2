@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>Admin - Customer Management</title>
+</head>
+
+<body class="bg-gray-100 font-sans antialiased">
+  <div class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold text-blue-600 mb-8">Customer Management</h1>
+    <div class="overflow-x-auto rounded-lg shadow-md">
+      <table class="w-full text-sm text-left table-auto border-collapse">
+        <thead class="text-xs text-white uppercase bg-gray-800">
+          <tr>
+            <th class="px-4 py-2 border border-transparent">First Name</th>
+            <th class="px-4 py-2 border border-transparent">Last Name</th>
+            <th class="px-4 py-2 border border-transparent">Email</th>
+            <th class="px-4 py-2 border border-transparent">Actions</th>
+          </tr>
+        </thead>
+        <tbody id="customerList">
+        </tbody>
+      </table>
+    </div>
+
+    <div id="editModal" class="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-50 hidden">
+      <div class="bg-white w-1/3 p-8 rounded-lg">
+        <h2 class="text-2xl font-bold mb-4">Edit Customer</h2>
+        <form id="editCustomerForm">
+          <div class="mb-4">
+            <label for="editFirstName" class="block text-gray-700 font-semibold">First Name:</label>
+            <input type="text" id="editFirstName" class="form-input mt-1 block w-full" required>
+          </div>
+          <div class="mb-4">
+            <label for="editLastName" class="block text-gray-700 font-semibold">Last Name:</label>
+            <input type="text" id="editLastName" class="form-input mt-1 block w-full" required>
+          </div>
+          <div class="mb-4">
+            <label for="editEmail" class="block text-gray-700 font-semibold">Email:</label>
+            <input type="email" id="editEmail" class="form-input mt-1 block w-full" required>
+          </div>
+          <div class="flex justify-between">
+            <button type="submit" id="saveCustomer" class="px-4 py-2 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600 focus:outline-none focus:bg-blue-700">Save</button>
+            <button type="button" id="deleteCustomer" class="px-4 py-2 bg-red-500 text-white font-semibold rounded hover:bg-red-600 focus:outline-none focus:bg-red-700">Delete</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Load customer data from localStorage and populate the table
+                var customers = JSON.parse(localStorage.getItem('customers')) || [];
+                var customerList = document.getElementById('customerList');
+
+                customers.forEach(function(customer) {
+                    addCustomerToTable(customer.firstname, customer.lastname, customer.email);
+                });
+
+                // Edit Customer Modal
+                var editModal = document.getElementById('editModal');
+                var editForm = document.getElementById('editCustomerForm');
+                var editFirstName = document.getElementById('editFirstName');
+                var editLastName = document.getElementById('editLastName');
+                var editEmail = document.getElementById('editEmail');
+                var saveButton = document.getElementById('saveCustomer');
+                var deleteButton = document.getElementById('deleteCustomer');
+
+                // Function to add a customer row to the table
+                function addCustomerToTable(firstName, lastName, email) {
+                    var row = document.createElement('tr');
+                    row.innerHTML = '<td>' + firstName + '</td>' +
+                                    '<td>' + lastName + '</td>' +
+                                    '<td>' + email + '</td>' +
+                                    '<td><button class="edit">Edit</button></td>';
+                    customerList.appendChild(row);
+                }
+
+                // Function to fill the edit form with customer details
+                function fillEditForm(firstName, lastName, email) {
+                    editFirstName.value = firstName;
+                    editLastName.value = lastName;
+                    editEmail.value = email;
+
+                    // Add event listener to the edit form submission
+                    saveButton.addEventListener('click', function(event) {
+                        event.preventDefault();
+                        // Get the index of the customer in the customers array
+                        var index = customers.findIndex(function(cust) {
+                            return cust.email === email;
+                        });
+                        // Update customer details
+                        customers[index].firstname = editFirstName.value;
+                        customers[index].lastname = editLastName.value;
+                        customers[index].email = editEmail.value;
+
+                        // Update localStorage
+                        localStorage.setItem('customers', JSON.stringify(customers));
+
+                        // Close the modal
+                        editModal.style.display = 'none';
+
+                        // Refresh the page
+                        location.reload();
+                    });
+
+                    // Add event listener to the delete button
+                    deleteButton.addEventListener('click', function() {
+                        // Get the index of the customer in the customers array
+                        var index = customers.findIndex(function(cust) {
+                            return cust.email === email;
+                        });
+                        // Remove the customer from the array
+                        customers.splice(index, 1);
+
+                        // Update localStorage
+                        localStorage.setItem('customers', JSON.stringify(customers));
+
+                        // Close the modal
+                        editModal.style.display = 'none';
+
+                        // Refresh the page
+                        location.reload();
+                    });
+                }
+
+                // Add event listener to each "Edit" button
+                customerList.addEventListener('click', function(event) {
+                    if (event.target && event.target.tagName === 'BUTTON' && event.target.classList.contains('edit')) {
+                        var row = event.target.parentNode.parentNode;
+                        var cells = row.getElementsByTagName('td');
+                        var firstName = cells[0].textContent;
+                        var lastName = cells[1].textContent;
+                        var email = cells[2].textContent;
+
+                        // Fill the edit form with customer details
+                        fillEditForm(firstName, lastName, email);
+
+                        // Show the edit modal
+                        editModal.style.display = 'block';
+                    }
+                });
+            });
+        </script>
+    </body>
+
+</html>
